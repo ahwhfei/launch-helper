@@ -4,11 +4,13 @@
   "description": "A library for launch XenApp/Desktop receiver",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.conf.js"
   },
   "author": "hongfei.wu@citrix.com",
   "license": "UNLICENSED",
   "devDependencies": {
-    "webpack": "^4.1.0"
+    "webpack": "^4.1.0",
+    "webpack-cli": "^2.0.10"
   }
 }
