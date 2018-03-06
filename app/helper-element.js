@@ -6,7 +6,7 @@ class HelperElement {
         
         const manifest = new Manifest();
         manifest.xenDesktopApi = this.xenDesktopApi;
-        manifest.staticResource = this.staticResource;
+        manifest.staticResource = this.staticResource || window.location.origin;
     }
 
     get element() {

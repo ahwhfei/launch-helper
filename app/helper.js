@@ -8,7 +8,7 @@ class Helper {
         const citrix = window.citrix;
         try {
             citrix.receiver.setPath(`${manifest.staticResource}/external/HTML5Client`);
-            citrix.receiver.createSession('wuhongfei', this._sessionParams, this._sessionCreated.bind(this));
+            citrix.receiver.createSession(null, this._sessionParams, this._sessionCreated.bind(this));
         } catch (e) {
             console.error(e);
         }
