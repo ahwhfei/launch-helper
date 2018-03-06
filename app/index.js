@@ -1,11 +1,11 @@
+import HelperElement from './helper-element.js';
 import Helper from './helper.js';
 import IcaJson from './ica-json.js';
-import HelperElement from './helper-element.js';
 import ScriptLoad from './script-load.js';
 
 window.launchHelper = function () {
     const loadCitrixSDKPromise = new Promise(resolve => {
-        new ScriptLoad('CitrixHTML5SDK.js', () => {
+        new ScriptLoad(`${manifest.staticResource}/CitrixHTML5SDK.js`, () => {
             resolve();
         }).loadScript();
     });

@@ -1,6 +1,12 @@
+import Manifest from './manifest.js';
+
 class HelperElement {
     constructor() {
         this._element = document.getElementsByTagName('launch-helper')[0];
+        
+        const manifest = new Manifest();
+        manifest.xenDesktopApi = this.xenDesktopApi;
+        manifest.staticResource = this.staticResource;
     }
 
     get element() {
@@ -15,6 +21,14 @@ class HelperElement {
 
     get method() {
         return this._element.getAttribute('method') || 'GET';
+    }
+
+    get xenDesktopApi() {
+        return this._element.getAttribute('api');
+    }
+
+    get staticResource() {
+        return this._element.getAttribute('res');
     }
 
     appendIframe() {
