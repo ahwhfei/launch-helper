@@ -1,0 +1,382 @@
+{
+    "type": "object",
+    "properties": {
+        "settings": {
+            "type": "object",
+            "properties": {
+                "settings_version": {
+                    "type": "string"
+                },
+				"store_settings": {
+					"type" : "object",
+					"properties" : {
+						"name": {
+							"type": "string"
+						},
+						"beacons": {
+							"type": "object",
+							"properties": {
+								"external": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"url": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"internal": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"url": {
+												"type": "string"
+											}
+										}
+									}
+								}
+							}
+						},
+						"gateways": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"url": {
+										"type": "string"
+									},
+									"is_default": {
+										"type": "boolean"
+									}
+								}
+							}
+						},
+						"rf_web": {
+							"type": "object",
+							"properties": {
+								"url": {
+									"type": "string"
+								}
+							}
+						},
+						"sso": {
+							"type": "object",
+							"properties": {
+								"extensionId": {
+									"type": "string"
+								}
+							}
+						},
+						"externalApps":{
+							"type" : "array",
+							"items" :{
+								"type" : "string"
+							}
+						}
+					}
+				},
+				"engine_settings": {
+					"type": "object",
+					"properties": {
+					    "ceip": {
+							"type": "object",
+							"properties" :{
+								"enabled" : {
+								    "type" : "boolean"
+								}
+							}
+						},
+						"ui": {
+							"type": "object",
+							"properties" :{
+								"toolbar" : {
+									"type" : "object",
+									"properties" :{
+										"menubar" : {
+											"type" : "boolean"
+										},
+										"usb" : {
+											"type" : "boolean"
+										},
+										"fileTransfer" :{
+											"type" : "boolean"
+										},
+										"about" :{
+											"type" : "boolean"
+										},
+										"lock" :{
+											"type" : "boolean"
+										},
+										"disconnect" :{
+											"type" : "boolean"
+										},
+										"logoff" :{
+											"type" : "boolean"
+										},
+										"fullscreen" :{
+											"type" : "boolean"
+										},
+										"multitouch" :{
+											"type" : "boolean"
+										},
+										"preferences" :{
+											"type" : "boolean"
+										},
+										"gestureGuide" :{
+											"type" : "boolean"
+										}
+									}
+								},
+								"sessionsize" : {
+									"type" : "object",
+									"properties" :{
+										"windowstate" : {
+											"type" : "string"
+										},
+										"minwidth" : {
+											"type" : "integer"
+										},
+										"minheight" : {
+											"type" : "integer"
+										},
+										"available" : {
+											"type" : "object",
+											"properties" :{
+												"default" : {
+													"type" : "string"
+												},
+												"values": {
+													"type": "array",
+													"items": {
+														"type": "string"
+													}
+												}
+											}
+										}
+									}
+								},
+								"appSwitcher" : {
+									"type" : "object",
+									"properties" :{
+										"showTaskbar" : {
+											"type" : "boolean"
+										},
+										"autoHide" : {
+											"type" : "boolean"
+										},
+										"showIconsOnly" : {
+											"type" : "boolean"
+										}
+									}
+								},
+								"netPromoters" :{
+									"type" : "boolean"
+								}
+							}
+						},
+						"nacl":{
+							"type" : "object",
+							"properties" : {
+								"supportNacl" :{
+									"type" : "boolean"
+								},
+								"graphics" :{
+									"type" : "object",
+									"properties" :{
+										"enable" : {
+											"type" : "boolean"
+										},
+										"config" :{
+											"type" : "object",
+											"properties" : {
+												"profile" :{
+													"type" : "integer"
+												},
+												"acceleration" :{
+													"type" : "integer"
+												}
+											}
+										}
+									}
+								},
+								"audio" :{
+									"type" : "object",
+									"properties" :{
+										"enable" :{
+											"type" : "boolean"
+										}
+ 									}
+								},
+								"video" :{
+									"type" : "object",
+									"properties" :{
+										"enable" :{
+											"type" : "boolean"
+										}
+ 									}
+								}
+							}
+						},
+						"features" :{
+							"type" : "object",
+							"properties" :{
+								"graphics" :{
+									"type" : "object",
+									"properties" :{
+										"jpegSupport" :{
+											"type" : "boolean"
+										},
+										"h264Support" :{
+											"type" : "object",
+											"properties" :{
+												"enabled" :{
+													"type" : "boolean"
+												},
+												"losslessOverlays" :{
+													"type" : "boolean"
+												},
+												"dirtyRegions" :{
+													"type" : "boolean"
+												},
+												"yuv444Support" :{
+													"type" : "boolean"
+												}
+											}
+										},
+										"multiMonitor" :{
+											"type" : "boolean"
+										}
+									}
+									
+								},
+								"filetransfer" :{
+									"type" :"object",
+									"properties" :{
+										"allowupload":{
+											"type" : "boolean"
+										},
+										"allowdownload":{
+											"type" : "boolean"
+										},
+										"maxuploadsize":{
+											"type" : "integer"
+										},
+										"maxdownloadsize":{
+											"type" : "integer"
+										}
+									}
+								},
+								"com":{
+									"type":"object",
+									"properties":{
+										"portname":{
+											"type" : "string"
+										}
+									}
+								}
+							}
+						},
+						
+						"transport" :{
+							"type" : "object",
+							"properties" :{
+								"outbufscountclient" : {
+									"type" : "integer"
+								},
+								"outbufscounthost" : {
+									"type" : "integer"
+								},
+								"cgpEnabled" : {
+									"type" : "boolean"
+								}
+							}
+						},
+						"uniqueID" :{
+							"type" : "object",
+							"properties" :{
+								"prefixKey" : {
+									"type" : "string"
+								},
+								"restrictNameLength" : {
+									"type" : "boolean"
+								}
+							}
+						},
+						"seamless" :{
+							"type" : "object",
+							"properties" :{
+								"showInShelf" : {
+									"type" : "boolean"
+								}
+							}
+						},
+						"customVC" :{
+							"type" : "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"appId":{ 
+										"type" : "string"
+									},
+									"streamName": {
+										"type": "string"									
+									}
+								}
+							}
+						},
+						"vc_channel" :{
+							"type" : "object",
+							"properties" : {
+								"CTXCPM " :{
+									"type" : "boolean"
+								},
+								"CTXCCM " :{
+									"type" : "boolean"
+								},
+								"CTXTW  " :{
+									"type" : "boolean"
+								},
+								"CTXTWI\\0" :{
+									"type" : "boolean"
+								},
+								"CTXCLIP" :{
+									"type" : "boolean"
+								},
+								"CTXCAM " :{
+									"type" : "boolean"
+								},
+								"CTXMM  " :{
+									"type" : "boolean"
+								},
+								"CTXCTL " :{
+									"type" : "boolean"
+								},
+								"CTXEUEM" :{
+									"type" : "boolean"
+								},
+								"CTXGUSB" :{
+									"type" : "boolean"
+								},
+								"CTXFILE" :{
+									"type" : "boolean"
+								},
+								"CTXMOB" :{
+									"type" : "boolean"
+								},
+								"CTXMTCH" :{
+									"type" : "boolean"
+								},
+								"CTXSCRD" :{
+									"type" : "boolean"
+								}
+							}
+						}
+					}
+				}
+			}
+        }
+    }
+}

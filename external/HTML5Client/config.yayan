@@ -1,0 +1,132 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+SOURCE_DIR = 'src'
+L10N_DIR = 'locales'
+
+I18N_FUNCTIONS = ['$.t']
+
+IGNORE_FIRST_PARAMETER_FUNCTIONS = (
+    r'ActiveXObject',
+    r'Debug\.trace',
+    r'Debug\.verbose',
+    r'GetCookie',
+    r'ImeTraits',
+    r'ModuleParameter',
+    r'ProtocolDriverParameter',
+    r'ReadDataEvent\.Fire',
+    r'ReadDataEvent\.Register',
+    r'VirtualDriver',
+    r'VirtualDriverParameter',
+    r'\$',
+    r'\$\.inArray',
+    r'agent\.search',
+    r'console\.\w+',
+    r'document\.createElement',
+    r'document\.createEvent',
+    r'document\.getElementById',
+    r'document\.getElementsByTagName',
+    r'document\.write',
+    r'importScripts',
+    r'style\.sheet\.insertRule',
+    
+    # member functions
+    r'.*?\.AddListener',
+    r'.*?\.addClass',
+    r'.*?\.addEventListener',
+    r'.*?\.attr',
+    r'.*?\.indexOf',
+    r'.*?\.open',
+    r'.*?\.removeClass',
+    r'.*?\.removeEventListener',
+    r'.*?\.setAttribute',
+    )
+
+IGNORE_ALL_PARAMETER_FUNCTIONS = (
+    # r'CtxDialog\.showError',
+    r'OutputError\.WriteToInputBox',
+    r'String',
+    )
+
+
+IGNORE_STRINGS = (
+    r'0X',
+    r'0x',
+    r'2d',
+    r'Csrf-Token',
+    r'Ctrl',
+    r'DOMMouseScroll',
+    r'ExchangeICAStr',
+    r'GetData',
+    r'ICA 3\.0',
+    r'VDTW30',
+    r'WDICA',
+    r'\)',
+    r'\\0',
+    r'\\n',
+    r'\\r',
+    r'\\r\\n',
+    r'arraybuffer',
+    r'cb',
+    r'cmd',
+    r'compositionend',
+    r'compositionstart',
+    r'compositionupdate',
+    r'container_div',
+    r'keyDown',
+    r'keyUp',
+    r'keydown',
+    r'keypress',
+    r'keyup',
+    r'mediaQueryBinarySearch',
+    r'min--moz-device-pixel-ratio',
+    r'mousedown',
+    r'mousemove',
+    r'mouseout',
+    r'mouseover',
+    r'mouseup',
+    r'mousewheel',
+    r'msg',
+    r'noevent',
+    r'ontouchstart',
+    r'px',
+    r'showFtu',
+    r'src',
+    r'touchend',
+    r'touchmove',
+    r'touchstart',
+    r'url\("?',
+    r'zoom_div',
+    r'zoom_style',
+    r'zoomevent',
+    r'⌘',
+    
+    r'\s*', # space
+    r"\w+\.class", # UIModule.class, Xxxx.class
+    r'[0-9!" #$%&\'()*+,-./:;<=>?@[\\\]^_`{|}~\']+', # only punctuation and number
+    r'[A-Z]+(_[A-Z]+)+', # UNDERLINE_UPPER_VARIABLE_NAME
+    r'(url\(")?[-\w\\/\.]+?(\.[a-z]{2,4}|/|\\\\)("\))?', # relative file path
+    r'(-|\+)?\d(\.|\d)*(em|px|%|_)?', # digital with unit
+    r'#?[0-9A-Fa-f]{3,6}', # hex digital
+    r'(\s*<\w+(\s+[\w\'"=]+)*\s*>\s*)+', # html begin tag <p class="hello">
+    r'(\s*</[a-zA-Z]+>\s*)+', # html end tag </p></div>
+    r'(\s*<[a-zA-Z]+\s*/>\s*)+', # html whole tag <br/><br />
+    r'CTX[A-Z]+[0-9]?\s*(\\0)?', # CTX???
+
+    # r'[a-z][a-z0-9]*[A-Z][a-zA-Z0-9]*', # camelVariableName
+    # r'[a-z][a-z0-9]*(_[a-z0-9]+)+$',# underline_lowercase_variable_name
+    # r'[A-Z][a-zA-Z]*(-[A-Z][a-zA-Z]*)+', # HTTP-HEADER-KEY
+    )
+
+# the line is splited into 3 parts: before the string, string itself (without the quote), after the string
+# 3 regex are used to match the 3 parts.
+# only all 3 parts are matched then this line will be ignored
+# you could use None, '' or False to bypass a part
+IGNORE_LINES = (
+    (r'.+?(\.s|S)tyle\.[a-zA-Z]+\s*=\s*(.+?\?\s*(.+?:)?)?\s*', r'', r''), # style assignment, ???.style.??? = ???
+    (r'.+?(==|!=)=?\s*',r'', r''), # equal check: a == 'abc'
+    (r'', r'', r'\s*(==|!=).+'), # equal check: 'abc' != b
+    (r'.+?\[\s*', r'', r'\s*\].*'), # dict index: dict['index']
+    (r'(^|.+?,|.+?\{)\s*', r'', '\s*:.*'), # attribute assignment: {'abc': 1, 'edf': 2}
+    (r'\s+case\s*', r'', '\s*:.*'), # case 'some string':
+        )

@@ -1,0 +1,638 @@
+{	
+	"citrix_receiver":{
+		"message":"Citrix Receiver",
+		"description": "Citrix Receiver"
+	},
+
+    "settings_main":{
+		"message":"Parámetros",
+		"description": "Tool tip for account settings"
+	},
+	"reload_store_main":{
+		"message":"Volver a cargar la tienda",
+		"description": "Tooltip for reload store page"
+	},
+		
+	"connect_button":{
+			"message":"Conectar",
+			"description": "Connect button display value"
+	},
+		
+	"account_url":{
+			"message":"URL de cuenta",
+			"description": "Account URL label"
+	},
+	"store":{
+		"message" : "Tienda",
+		"description": "StoreFront/Web interface/Gateway"
+	},
+	
+	"store_address":{
+		"message":"Dirección de $store$",
+		"description": "Store address label",
+		"placeholders": {
+			"store" : {
+				"content" : "$1",
+				"example": "Tienda"
+			}
+		}
+	},
+		
+	"apply":{
+			"message":"Aplicar",
+			"description": "Apply button display value"
+	},
+		
+	"settings":{
+			"message":"Parámetros",
+			"description": "Settings button display value"
+	},
+
+    "account":{
+      "message":"Cuenta",
+      "description":"Account Setting Heading Name"
+    },
+
+    "printer":{
+      "message":"Impresora",
+      "description":"Printer Setting Heading Name"
+    },
+
+    "printer_setting_description":{
+      "message":"Seleccione una opción predeterminada de impresión.",
+      "description":"Printer Setting description"
+    },
+
+    "open_PDF_option":{
+      "message":"Imprimir como PDF",
+      "description":"Open PDF option name"
+    },
+
+    "open_PDF_option_description":{
+      "message":"Guarde un PDF del documento en su dispositivo. Puede revisar el documento antes de imprimirlo.",
+      "description":"Open PDF option description"
+    },
+
+    "google_cloud_print_option":{
+      "message":"Google Cloud Print",
+      "description":"Google cloud print option name"
+    },
+
+    "google_cloud_print_option_description":{
+      "message":"Imprime en papel con la impresora en la nube seleccionada.",
+      "description":"Google cloud print option description"
+    },
+
+    "disabled_printer_option":{
+      "message":"No hay ninguna impresora configurada",
+      "description":"Option shown when printer list is disabled."
+    },
+
+    "default_printer_list_option":{
+      "message":"Elegir impresora",
+      "description":"Default option shown in the printer list"
+    },
+
+    "add_google_cloud_printer":{
+      "message":"Agregar impresora de Google Cloud Print...",
+      "description":"URL link to add the google cloud printer."
+    },
+
+    "done":{
+      "message":"Listo",
+      "description":"Done button name"
+    },
+
+    "printing_support_warning_message":{
+      "message":"Para que funcione la impresión, su administrador de TI debe instalar el controlador de impresora PDF de Citrix.",
+      "description":"Warning message about printer setup in VDA"
+    },
+
+	"cra":{
+		"message":"Aplicación $app_name$ para Chrome",
+		"description": "Full form of cra",
+		"placeholders": {
+			"app_name" : {
+				"content" : "Citrix Receiver"
+			}
+		}
+	},
+
+	"configure_cra":{
+		"message":"Configurar $app_name$",
+		"description": "Configure chrome app",
+		"placeholders": {
+			"app_name" : {
+				"content" : "Citrix Receiver"
+			}
+		}
+	},
+		
+	"error_help_desk":{
+			"message":"Póngase en contacto con el servicio de asistencia con la siguiente información: $1",
+			"description": ""
+	},
+		
+	"error_file_extension":{
+		"message":"$app_name$ no se ha configurado para abrir el tipo de archivo $file_type$.",
+		"description": "Citrix receiver not configured to open unknown file extensions",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			},
+			"file_type": {
+				"content" : "$2",
+				"example": ".xyz"
+			}
+		}
+	},
+	
+	"error_app_open":{
+		"message":"$app_name$ no pudo abrir ",
+		"description": "Citrix receiver could not be opened",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+	
+	"error_incorrect_url":{
+			"message":"No se puede conectar al servidor. Asegúrese de que la dirección es correcta y que ha incluido \"http://\" o \"https://\". Si continúa sin poder conectar, póngase en contacto con su servicio de asistencia técnica.",
+			"description": ""
+	},
+		
+	"error_invalid_url":{
+			"message":"Introduzca una URL válida.",
+			"description": "Enter valid URL."
+	},
+		
+	"error_notConfigured":{
+		"message":"$app_name$ no se ha configurado.",
+		"description": "",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+		
+	"error_network_conn":{
+			"message":"Compruebe la conectividad de la red. No se puede conectar con \"$sfUrl$\"",
+			"description": "Network connection error",
+			"placeholders": { 
+				"sfUrl" : {
+					"content" : "$1",
+					"example": "<ip address>"
+			}
+		}
+	},
+		
+	"error_config_fail":{
+		"message":"La configuración de $app_name$ falló con \"$crFile$\"",
+		"description": "Configuration failed msg",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			},
+			"crFile": {
+				"content" : "$2",
+				"example": "config.cra"
+			}			
+		}
+	},
+	
+	"error_config_fail_withError":{
+		"message":"La configuración de $app_name$ falló con \"$crFile$\". Error: $errorMsg$",
+		"description": "Configuration failed message",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			},
+			"crFile": {
+				"content" : "$2",
+				"example": "config.cra"
+			},
+			"errorMsg": {
+				"content" : "$3"
+			}
+		}
+	},
+		
+	"connect_confirm":{
+		"message":"¿Seguro que quiere realizar la conexión?",
+		"description": "Confirm message before connecting"
+	},
+	
+	"connect_URL_secure_msg":{
+		"message":"Esta conexión a \"$store_url$\" no es segura. Proceda únicamente si confía en este servidor. ",
+		"description": "Message saying connection to a StoreFront/Web interface/Gateway url over http",
+		"placeholders": {
+			"store_url" : {
+				"content" : "$1",
+				"example": "<ip address>"
+			}
+		}
+	},
+		
+	"secureMsg_preference":{
+		"message":"No volver a mostrar esto",
+		"description": "To hide the secure connection dialog automatically from next launch onwards"
+	},
+		
+	"error_file_open_gdrive":{
+		"message":"$app_name$ solo puede abrir archivos de Google Drive.",
+		"description": "Error message saying files can only be opened from Google drive",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+		
+	"CR_config_applied":{
+		"message":"Ahora $app_name$ se ha configurado con \"$file_name$\"",
+		"description": "CRA configured using default cr file",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			},
+            		"file_name": {
+                		"content":"$2",
+                		"example":"default.cr"
+            		}
+		}
+	},
+	
+	"null_callback":{
+			"message":"devolución de llamada = null",
+			"description": "Callback passed is null"
+	},
+		
+	"network_error":{
+			"message": "Error de red",
+			"description": "Network error"
+	},
+		
+	"error":{
+			"message":"Error",
+			"description": "Error"
+	},
+		
+	"information":{
+			"message":"Información",
+			"description": "Information"
+	},
+		
+	"internal_error":{
+			"message":"Error interno",
+			"description": "Internal error"
+	},
+	
+	"store_settings_change":{
+		"message":"Los parámetros de $store$ se aplicarán cuando haya cerrado todas las ventanas y haya reiniciado $app_name$.",
+		"description": "Changing store url in settings page",
+		"placeholders": {
+			"store" : {
+				"content" : "$1",
+				"example": "Store"
+			},	
+			"app_name": {
+				"content" : "$2",
+				"example": "Citrix Receiver"
+			}
+		}					
+	},
+
+	"add_store":{
+			"message":"¿Quiere agregar \"$storeName$\", proporcionado por \"$sfUrl$\"?",
+			"description": "Adding store front url",
+			"placeholders": {
+				"storeName" : {
+					"content" : "$1",
+					"example": "<store name>"
+				},
+				"sfUrl": {
+					"content" : "$2",
+					"example": "<ip address>"
+				}
+		}
+	},
+	
+	"storeName":{
+			"message":"Nombre de $store$:",
+			"description": "Store Name",
+			"placeholders": {
+				"store" : {
+					"content" : "$1",
+					"example": "Store"
+				}
+			}
+	},
+	"storeAddress":{
+			"message":"Dirección de $store$:",
+			"description": "Store Address",
+			"placeholders": {
+				"store" : {
+					"content" : "$1",
+					"example": "Store"
+				}
+			}
+	},
+	"gatewayAddress":{
+			"message":"Dirección de la puerta de enlace:",
+			"description": "Gateway Address"
+	},
+
+	"ok_button":{
+		"message":"Aceptar",
+		"description":"ok button"
+	},
+
+	"cancel":{
+			"message":"Cancelar",
+			"description": "Cancel"
+	},
+	"add":{
+			"message":"Agregar",
+			"description": "Add"
+	},
+	"genericError":{
+			"message":"Error genérico:",
+			"description": "Generic error"
+	},
+	"enumerate_res_error":{
+			"message":"No se ha podido obtener una lista de los recursos para el usuario.",
+			"description": "Couldn't enumerate resources for the user."
+	},
+	"unauthorized_user_error":{
+			"message":"El usuario no ha iniciado sesión o no está autorizado para acceder a los datos.",
+			"description": "User is not logged in or authorized to access the data."
+	},
+	"error_launch_generic":{
+		"message":"$app_name$ no pudo iniciar la sesión. Error: $errorMsg$",
+		"description": "Citrix Receiver couldn't launch the session due to the error specified using errorMsg",
+		"placeholders": {
+            		"app_name" : {
+                		"content" : "$1",
+                		"example": "Citrix Receiver"
+            		},
+			"errorMsg": {
+				"content" : "$2",
+				"example": "The server refused a connection. Currently applies to XenDesktop only."
+			}
+		}
+	},
+	
+	"AppRemoved":{
+		"message" : "El recurso de inicio ya no existe, ya no está habilitado o ya no es visible para el usuario actual.",
+		"description": "The resource to launch no longer exists, is no longer enabled or is no longer visible to current user."
+	},
+	
+    "NoMoreActiveSessions": {
+		"message" : "El usuario ha alcanzado el máximo de sesiones activas abiertas. En estos momentos solo se aplica a XenDesktop.",
+		"description": "The user is not allowed any more active sessions. Currently applies to XenDesktop only."
+	},
+	
+    "NotLicensed":{
+		"message" : "El servidor no tiene la licencia necesaria para llevar a cabo la actividad solicitada.",
+		"description": "The server does not have the required license to perform the requested activity."
+	},
+	
+    "UnavailableDesktop": {
+		"message" : "No hay ninguna estación de trabajo disponible para atender esta solicitud. En estos momentos solo se aplica a XenDesktop.",
+		"description": "No workstations are available to service this request. Currently applies to XenDesktop only."
+	},
+	
+	"CouldNotConnectToWorkstation": {
+		"message" : "El servidor ha rechazado una conexión. En estos momentos solo se aplica a XenDesktop.",
+		"description": "The server refused a connection. Currently applies to XenDesktop only."
+	},
+	
+    "WorkstationInMaintenance": {
+		"message" : "La estación de trabajo solicitada se encuentra en modo de mantenimiento y no se puede usar. En estos momentos solo se aplica a XenDesktop.",
+		"description": "The requested workstation is in maintenance mode and cannot be used. Currently applies to XenDesktop only."
+	},
+    
+	"ResourceError": {
+		"message" : "Error general que no puede especificarse más.",
+		"description": "General error that cannot be further specified."
+	},
+	
+	"GeneralAppLaunchError":{
+		"message" : "Error general que no puede especificarse más.",
+		"description": "General error that cannot be further specified."
+	},
+	
+    "Unauthorized":{
+		"message" : "El usuario no ha iniciado sesión o no está autorizado para acceder a los datos.",
+		"description": "The user is not logged in or authorized to access the data."
+	},	
+	
+	"networkUnreachable":{
+		"message" : "No se puede conectar con el servidor. Compruebe la red e inténtelo de nuevo.",
+		"description": "Network is unavailable."
+	},
+		
+	"storeUnreachable":{
+		"message" : "No se puede conectar con el servidor. Póngase en contacto con el servicio de asistencia técnica para obtener ayuda, o verifique la dirección del servidor en los Parámetros de cuenta.",
+		"description": "When network and beacon are reachable but store urls are unreachable"
+	},
+	
+	"beaconUnreachable":{
+		"message" : "No se puede conectar con el servidor. Póngase en contacto con el servicio de asistencia técnica para obtener ayuda, o verifique la dirección del servidor en los Parámetros de cuenta.",
+		"description": "Network is present but beacons are unreachable."
+	},
+	
+	"offlinestatus":{
+		"message" : "No se puede conectar a la red. Inténtelo de nuevo cuando la red esté disponible.",
+		"description": ": When offline is detected and when network goes down. "
+	},
+	
+	"policy_applied_config_fail": {
+		"message" : "No puede cambiar esta configuración de Receiver. El administrador está utilizando directivas para configurar Receiver para usted.",
+		"description": "CR configuration failure message when admin has configured using google policies"
+	},
+	
+	
+	"CRA_update_notification":{
+		"message":"Hay una nueva versión de $1 disponible.",
+		"description": "New Chrome Receiver Update Available notification",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+	
+	"CRA_restart_message":{
+		"message" : "Reinicie $1 para actualizar.",
+		"description": "New CRA update Available notification message.",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+	
+	"Button_Now":{
+			"message":"Ahora",
+			"description": "Now button for Chrome Receiver Update Available notification"
+	},
+	
+	"Button_Later":{
+			"message":"Más tarde",
+			"description": "Later button for Chrome Receiver Update Available notification"
+	},
+	
+	"store_address_change":{
+		"message":"La dirección del servidor ha cambiado.",
+		"description": "When the store address is changed in account settings page"
+	},
+	"restart_now":{
+			"message":"Reiniciar ahora",
+			"description": "Restart Citrix Receiver button text"
+	},
+	"urlPlaceholder": {
+		"message" : "https://URL",
+		"description": "Watermark for URL field in Preferences page"
+	},
+	"thirdPartyLicenses":{
+		"message" : "Avisos de terceros de Receiver para Chrome",
+		"description": "Chrome third party notices link"
+	},
+    "http_error_code_403":{
+      "message" : "No se han podido verificar sus credenciales.",
+      "description": "When Authentication of user is failed."
+    },
+    "http_error_code_404":{
+      "message" : "El servidor de Google Cloud Print no está disponible. Vuelva a intentarlo más tarde.",
+      "description": "When GCP server is down."
+    },
+    "http_error_code_413":{
+      "message" : "El archivo es demasiado grande para imprimirse.",
+      "description": "HTTP request size is larger than the size of the request accepted by the GCP server."
+    },
+    "GCP_error_code_default":{
+      "message" : "Google Cloud Print no está disponible. Vuelva a intentarlo más tarde.",
+      "description": "Default error string"
+    },
+    "GCP_error_code_111":{
+      "message" : "No se encuentra la impresora. Seleccione otra.",
+      "description": "If printer trying to print to is not found."
+    },
+    "GCP_error_code_403":{
+      "message" : "No se pudo convertir a PDF.",
+      "description": "When the file that is printing to GCP is corrupted."
+    },
+    "GCP_no_printer_error":{
+      "message" : "No hay ninguna impresora configurada en Google Cloud Print. Configure una ahora.",
+      "description": "If user account does not contain any printer attached his/her GCP this error is shown"
+    },
+    "add_print_job_to_queue":{
+      "message":"Agregando $print_job_name$ de $session_name$ a la cola.",
+      "description": "Adding the print job to queue",
+      "placeholders": {
+          "print_job_name": {
+            "content" : "$1",
+            "example": "Doc1"
+          },
+          "session_name": {
+            "content" : "$2",
+            "example": "Tíulo de la ventana de la sesión"
+          }
+      }
+    },
+    "printed_file_to_GCP":{
+      "message":"$print_job_name$ imprimido en $printer_name$",
+      "description": "Printed the file to printer",
+      "placeholders": {
+          "print_job_name": {
+            "content" : "$1",
+            "example": "Doc1"
+          },
+          "printer_name":{
+            "content" : "$2",
+            "example": "Nombre de impresora"
+          }
+      }
+    },
+    "one_time_printer_setup_message":{
+      "message":"Si quiere imprimir con Google Cloud Print, puede configurarlo en Parámetros de impresora.",
+      "description":"One time message to user about printer setup."
+    },
+    "connection_center_title":{
+      "message":"Central de conexiones",
+      "description":"Connection Center title message"
+    },
+    "connection_center_description":{
+      "message":"Seleccione una sesión o una aplicación para aplicarle una acción:",
+      "description":"Description of radio buttons in connection center"
+    },
+    "connection_center_session_buttons_title":{
+      "message":"Acción para la sesión:",
+      "description":"Title for session buttons"
+    },
+    "connection_center_app_buttons_title":{
+      "message":"Acción para la aplicación:",
+      "description":"Title for app buttons"
+    },
+    "connection_center_logoff_button":{
+      "message":"Cerrar sesión",
+      "description":"Name for logoff button"
+    },
+    "connection_center_devices_button":{
+      "message":"Dispositivos",
+      "description":"Name for preferences button"
+    },
+    "connection_center_disconnect_button":{
+      "message":"Desconectar",
+      "description":"Name for disconnect button"
+    },
+    "connection_center_ctrl_alt_del_button":{
+      "message":"CTRL+ALT+SUPRIMIR",
+      "description":"Name for ctrl+alt+del button"
+    },
+    "connection_center_terminate_button":{
+      "message":"Finalizar",
+      "description":"Name for terminate button"
+    },
+	"seamless_multimonitor_drop_here":{
+      "message":"Colocar y arrastrar aquí para mover la sesión a este monitor",
+      "description":"Text displayed when moving seamless apps to different monitor"
+    },
+	"sendFeedback":{
+		"message" : "Enviar comentarios",
+		"description": "Send Feedback link text in Account settings"
+	},
+	"generalSettings": {
+		"message" : "General",
+		"description": "General setting title"
+	},
+	"multimonitorSettingsTitle": {
+		"message" : "Parámetros multi-monitor",
+		"description": "Multi-monitor settings title"
+	},
+	"multimonitorSettingsCheckboxLabel": {
+		"message" : "Abarcar todos los monitores con la presentación en pantalla",
+		"description": "Multi-monitor settings checkbox label"
+	},
+	"ceipSettingsTitle": {
+		"message" : "Customer Experience Improvement Program",
+		"description": "ceip settings title"
+	},
+	"ceipSettingsCheckboxLabel": {
+		"message" : "Ayudar a mejorar Receiver enviando estadísticas de uso anónimas",
+		"description": "ceip settings checkbox label"
+    }
+
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html;" charset="utf-8" />
+    <title>Citrix Receiver</title>
+    <link href="css/ctxs.chromeapp.css" rel="stylesheet" type="text/css"/>
+    <script src="js/CtxMessage.js" type="text/javascript"></script>
+</head>
+<body class="prefs-bg">
+    <div class="ctxsui-authentication-loginBox" id="_enter_url_pane">
+
+	   <span class="ctxsui-authentication-loginBox-innerBox-logo"></span>
+		<div class="ctxsui-authentication-loginBox-innerBox">
+			<div id="_inner_box">
+				<div class="enterurllabel" id="enterurllabelid"></div>
+				<input id="URL" name="URL" type="url" required spellcheck="false" />
+				<div id="inlineErrorContainer">					
+					<span id= "inline_error" class="inline_error"></span>
+				</div>
+				<button class="button_connect" id="connectUrl" ></button>
+			</div>
+		</div>
+	<span class="ctxsui-authentication-loginBox-innerBox-withoutlogo"></span>
+    </div>    
+    <div id ="ctx-dialog">
+		<div id="overlay"></div>
+		<div id="dialog-box" class="dialog-box">
+			<div class="errorDialogBody">
+			<div id ="errorMessage" class="dialog-message"></div>
+				<div class="errorDialogOkButton">
+					<button id="dialog-button" class="dialog-button"></button>
+				</div>
+		</div>
+		</div>
+	</div>
+    <div id ="unsecureURLWarning">
+		<div id="overlayURL">
+			<div id="dialog-boxURL" class="dialog-box">
+				<div id="closeUnsecureURLBoxBtn" class="close_button"></div>
+				<div class="unsecureWarningHeaderDiv">					
+					<div id="unsecure_image" class="unsecure_imagebox"></div>
+					<div id ="unsecureURLHeaderMsg" class="unsecureURLHeaderMsg"></div>
+				</div>
+			<div id ="unsecureURLMsg" class="unsecureURLMsg"></div>
+			<div class="unsecureWarningCheckboxDiv">
+				<input type="checkbox" class ="checkboxURL" id = "checkboxURL" name = "URLcheckbox">
+				<label id="labelforURL" class = "labelClassURL" for="checkboxURL"></label>
+			</div>
+			<div class="insecureButtonDiv">
+				<button class="dialog-button1" id ="dialog-buttonURL1"></button>
+				<button class="dialog-button2" id ="dialog-buttonURL2"></button>			
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id ="pspinner" class ="pspinner spinnerRotate"></div>
+</body>
+<script src="js/Utils.js" type="text/javascript"></script>
+<script src="js/Storage.js" type="text/javascript"></script>
+<script src="js/Preferences.js" type="text/javascript"></script>
+<script src="../../Common/CEIP.js" type="text/javascript"></script>
+</html>
