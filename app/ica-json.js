@@ -1,5 +1,5 @@
 import userInstance from './user.js';
-import icaApiUrl from './ica-url.js';
+import IcaUrl from './ica-url.js';
 import HelperElement from './helper-element.js';
 
 class IcaJson {
@@ -10,7 +10,7 @@ class IcaJson {
     async _fetchIcaJson() {
         const method = new HelperElement().method;
 
-        const response = await fetch(icaApiUrl, {
+        const response = await fetch(IcaUrl.url, {
             method: method,
             headers: {
                 Authorization: `CWSAuth bearer=${userInstance.user.token}`

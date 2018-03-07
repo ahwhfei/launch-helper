@@ -1,12 +1,6 @@
-import Manifest from './manifest.js';
-
 class HelperElement {
     constructor() {
         this._element = document.getElementsByTagName('launch-helper')[0];
-        
-        const manifest = new Manifest();
-        manifest.xenDesktopApi = this.xenDesktopApi;
-        manifest.staticResource = this.staticResource || window.location.origin;
     }
 
     get element() {
@@ -32,11 +26,19 @@ class HelperElement {
     }
 
     appendIframe() {
+        this._removeIframe();
         const iframe = document.createElement('iframe');
         iframe.setAttribute('id', 'studio');
         iframe.setAttribute('width', '100%');
         iframe.setAttribute('height', '100%');
         this._element.appendChild(iframe);
+    }
+
+    _removeIframe() {
+        const iframes = this._element.getElementsByTagName('iframe');
+        for (const iframe of iframes) {
+            this._element.removeChild(iframe);
+        }
     }
 }
 

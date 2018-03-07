@@ -2,12 +2,8 @@ import userInstance from './user.js';
 import HelperElement from './helper-element.js';
 
 class IcaUrl {
-    constructor() {
-        this._helperElement = new HelperElement();
-    }
-
-    get icaUrl() {
-        return `${this._xenDesktopApi}/${this._helperElement.src}`;
+    get url() {
+        return `${this._xenDesktopApi}/${new HelperElement().src}`;
     }
 
     get _xenDesktopApi() {
@@ -15,6 +11,4 @@ class IcaUrl {
     }
 }
 
-const ica = new IcaUrl();
-
-export default ica.icaUrl;
+export default new IcaUrl();

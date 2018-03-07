@@ -1,6 +1,12 @@
+import HelperElement from './helper-element.js';
+
 class Manifest {
     constructor() {
         window.manifest || (window.manifest = {});
+
+        const helperElement = new HelperElement();
+        this.xenDesktopApi = helperElement.xenDesktopApi;
+        this.staticResource = helperElement.staticResource || window.location.origin;
     }
 
     get manifest() {
