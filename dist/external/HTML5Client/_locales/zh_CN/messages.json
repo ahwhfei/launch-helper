@@ -1,0 +1,638 @@
+{	
+	"citrix_receiver":{
+		"message":"Citrix Receiver",
+		"description": "Citrix Receiver"
+	},
+
+    "settings_main":{
+		"message":"设置",
+		"description": "Tool tip for account settings"
+	},
+	"reload_store_main":{
+		"message":"重新加载应用商店",
+		"description": "Tooltip for reload store page"
+	},
+		
+	"connect_button":{
+			"message":"连接",
+			"description": "Connect button display value"
+	},
+		
+	"account_url":{
+			"message":"帐户 URL",
+			"description": "Account URL label"
+	},
+	"store":{
+		"message" : "应用商店",
+		"description": "StoreFront/Web interface/Gateway"
+	},
+	
+	"store_address":{
+		"message":"$store$地址",
+		"description": "Store address label",
+		"placeholders": {
+			"store" : {
+				"content" : "$1",
+				"example": "应用商店"
+			}
+		}
+	},
+		
+	"apply":{
+			"message":"应用",
+			"description": "Apply button display value"
+	},
+		
+	"settings":{
+			"message":"设置",
+			"description": "Settings button display value"
+	},
+
+    "account":{
+      "message":"帐户",
+      "description":"Account Setting Heading Name"
+    },
+
+    "printer":{
+      "message":"打印机",
+      "description":"Printer Setting Heading Name"
+    },
+
+    "printer_setting_description":{
+      "message":"选择默认打印选项。",
+      "description":"Printer Setting description"
+    },
+
+    "open_PDF_option":{
+      "message":"打印为 PDF 格式",
+      "description":"Open PDF option name"
+    },
+
+    "open_PDF_option_description":{
+      "message":"将 PDF 格式的文档保存到您的设备。可以在打印之前查看您的文档。",
+      "description":"Open PDF option description"
+    },
+
+    "google_cloud_print_option":{
+      "message":"Google 云打印",
+      "description":"Google cloud print option name"
+    },
+
+    "google_cloud_print_option_description":{
+      "message":"使用选定的云打印机在纸张上打印。",
+      "description":"Google cloud print option description"
+    },
+
+    "disabled_printer_option":{
+      "message":"未设置打印机",
+      "description":"Option shown when printer list is disabled."
+    },
+
+    "default_printer_list_option":{
+      "message":"选择打印机",
+      "description":"Default option shown in the printer list"
+    },
+
+    "add_google_cloud_printer":{
+      "message":"添加 Google 云打印机...",
+      "description":"URL link to add the google cloud printer."
+    },
+
+    "done":{
+      "message":"完成",
+      "description":"Done button name"
+    },
+
+    "printing_support_warning_message":{
+      "message":"要使用打印功能，IT 管理员必须安装 Citrix PDF 打印机驱动程序。",
+      "description":"Warning message about printer setup in VDA"
+    },
+
+	"cra":{
+		"message":"适用于 Chrome 应用程序的 $app_name$",
+		"description": "Full form of cra",
+		"placeholders": {
+			"app_name" : {
+				"content" : "Citrix Receiver"
+			}
+		}
+	},
+
+	"configure_cra":{
+		"message":"配置 $app_name$",
+		"description": "Configure chrome app",
+		"placeholders": {
+			"app_name" : {
+				"content" : "Citrix Receiver"
+			}
+		}
+	},
+		
+	"error_help_desk":{
+			"message":"请与技术支持人员联系并提供以下信息: $1",
+			"description": ""
+	},
+		
+	"error_file_extension":{
+		"message":"$app_name$ 未配置，无法打开 $file_type$ 文件类型。",
+		"description": "Citrix receiver not configured to open unknown file extensions",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			},
+			"file_type": {
+				"content" : "$2",
+				"example": ".xyz"
+			}
+		}
+	},
+	
+	"error_app_open":{
+		"message":"$app_name$ 无法打开 ",
+		"description": "Citrix receiver could not be opened",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+	
+	"error_incorrect_url":{
+			"message":"无法连接到服务器。请确保地址正确无误，并且您已将 http:// 或 https:// 包含在地址中。如果仍无法连接，请联系技术支持以获得帮助。",
+			"description": ""
+	},
+		
+	"error_invalid_url":{
+			"message":"请输入有效的 URL。",
+			"description": "Enter valid URL."
+	},
+		
+	"error_notConfigured":{
+		"message":"$app_name$ 未配置。",
+		"description": "",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+		
+	"error_network_conn":{
+			"message":"请检查您的网络连接。无法访问 \"$sfUrl$\"",
+			"description": "Network connection error",
+			"placeholders": { 
+				"sfUrl" : {
+					"content" : "$1",
+					"example": "<ip address>"
+			}
+		}
+	},
+		
+	"error_config_fail":{
+		"message":"$app_name$ 配置无法使用 \"$crFile$\"",
+		"description": "Configuration failed msg",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			},
+			"crFile": {
+				"content" : "$2",
+				"example": "config.cra"
+			}			
+		}
+	},
+	
+	"error_config_fail_withError":{
+		"message":"$app_name$ 配置无法使用 \"$crFile$\"，错误: $errorMsg$",
+		"description": "Configuration failed message",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			},
+			"crFile": {
+				"content" : "$2",
+				"example": "config.cra"
+			},
+			"errorMsg": {
+				"content" : "$3"
+			}
+		}
+	},
+		
+	"connect_confirm":{
+		"message":"是否确实要连接?",
+		"description": "Confirm message before connecting"
+	},
+	
+	"connect_URL_secure_msg":{
+		"message":"与 $store_url$ 的连接不安全。仅应在信任此服务器时才能继续。 ",
+		"description": "Message saying connection to a StoreFront/Web interface/Gateway url over http",
+		"placeholders": {
+			"store_url" : {
+				"content" : "$1",
+				"example": "<ip address>"
+			}
+		}
+	},
+		
+	"secureMsg_preference":{
+		"message":"不再显示此消息",
+		"description": "To hide the secure connection dialog automatically from next launch onwards"
+	},
+		
+	"error_file_open_gdrive":{
+		"message":"$app_name$ 只能打开 Google Drive 中的文件。",
+		"description": "Error message saying files can only be opened from Google drive",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+		
+	"CR_config_applied":{
+		"message":"$app_name$ 现在是使用 \"$file_name$\" 配置的",
+		"description": "CRA configured using default cr file",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			},
+            		"file_name": {
+                		"content":"$2",
+                		"example":"default.cr"
+            		}
+		}
+	},
+	
+	"null_callback":{
+			"message":"回调 = 空",
+			"description": "Callback passed is null"
+	},
+		
+	"network_error":{
+			"message": "网络错误",
+			"description": "Network error"
+	},
+		
+	"error":{
+			"message":"错误",
+			"description": "Error"
+	},
+		
+	"information":{
+			"message":"信息",
+			"description": "Information"
+	},
+		
+	"internal_error":{
+			"message":"内部错误",
+			"description": "Internal error"
+	},
+	
+	"store_settings_change":{
+		"message":"$store$设置将在您关闭所有窗口并重新启动 $app_name$ 后应用。",
+		"description": "Changing store url in settings page",
+		"placeholders": {
+			"store" : {
+				"content" : "$1",
+				"example": "Store"
+			},	
+			"app_name": {
+				"content" : "$2",
+				"example": "Citrix Receiver"
+			}
+		}					
+	},
+
+	"add_store":{
+			"message":"是否要添加 $sfUrl$ 提供的 $storeName$?",
+			"description": "Adding store front url",
+			"placeholders": {
+				"storeName" : {
+					"content" : "$1",
+					"example": "<store name>"
+				},
+				"sfUrl": {
+					"content" : "$2",
+					"example": "<ip address>"
+				}
+		}
+	},
+	
+	"storeName":{
+			"message":"$store$名称:",
+			"description": "Store Name",
+			"placeholders": {
+				"store" : {
+					"content" : "$1",
+					"example": "Store"
+				}
+			}
+	},
+	"storeAddress":{
+			"message":"$store$地址:",
+			"description": "Store Address",
+			"placeholders": {
+				"store" : {
+					"content" : "$1",
+					"example": "Store"
+				}
+			}
+	},
+	"gatewayAddress":{
+			"message":"网关地址:",
+			"description": "Gateway Address"
+	},
+
+	"ok_button":{
+		"message":"确定",
+		"description":"ok button"
+	},
+
+	"cancel":{
+			"message":"取消",
+			"description": "Cancel"
+	},
+	"add":{
+			"message":"添加",
+			"description": "Add"
+	},
+	"genericError":{
+			"message":"一般性错误:",
+			"description": "Generic error"
+	},
+	"enumerate_res_error":{
+			"message":"无法枚举此用户的资源。",
+			"description": "Couldn't enumerate resources for the user."
+	},
+	"unauthorized_user_error":{
+			"message":"用户未登录或未授权其访问数据。",
+			"description": "User is not logged in or authorized to access the data."
+	},
+	"error_launch_generic":{
+		"message":"$app_name$ 无法启动会话。错误: $errorMsg$",
+		"description": "Citrix Receiver couldn't launch the session due to the error specified using errorMsg",
+		"placeholders": {
+            		"app_name" : {
+                		"content" : "$1",
+                		"example": "Citrix Receiver"
+            		},
+			"errorMsg": {
+				"content" : "$2",
+				"example": "The server refused a connection. Currently applies to XenDesktop only."
+			}
+		}
+	},
+	
+	"AppRemoved":{
+		"message" : "要启动的资源不再存在、不再处于启用状态或不再对当前用户可见。",
+		"description": "The resource to launch no longer exists, is no longer enabled or is no longer visible to current user."
+	},
+	
+    "NoMoreActiveSessions": {
+		"message" : "不允许用户运行更多活动会话。当前仅适用于 XenDesktop。",
+		"description": "The user is not allowed any more active sessions. Currently applies to XenDesktop only."
+	},
+	
+    "NotLicensed":{
+		"message" : "服务器没有所需的许可证，无法执行请求的活动。",
+		"description": "The server does not have the required license to perform the requested activity."
+	},
+	
+    "UnavailableDesktop": {
+		"message" : "没有可用于向此请求提供服务的工作站。当前仅适用于 XenDesktop。",
+		"description": "No workstations are available to service this request. Currently applies to XenDesktop only."
+	},
+	
+	"CouldNotConnectToWorkstation": {
+		"message" : "服务器拒绝连接。当前仅适用于 XenDesktop。",
+		"description": "The server refused a connection. Currently applies to XenDesktop only."
+	},
+	
+    "WorkstationInMaintenance": {
+		"message" : "请求的工作站处于维护模式，无法使用。当前仅适用于 XenDesktop。",
+		"description": "The requested workstation is in maintenance mode and cannot be used. Currently applies to XenDesktop only."
+	},
+    
+	"ResourceError": {
+		"message" : "无法进一步指定的一般错误。",
+		"description": "General error that cannot be further specified."
+	},
+	
+	"GeneralAppLaunchError":{
+		"message" : "无法进一步指定的一般错误。",
+		"description": "General error that cannot be further specified."
+	},
+	
+    "Unauthorized":{
+		"message" : "用户未登录或未授权其访问数据。",
+		"description": "The user is not logged in or authorized to access the data."
+	},	
+	
+	"networkUnreachable":{
+		"message" : "无法连接到服务器。请检查您的网络并重试。",
+		"description": "Network is unavailable."
+	},
+		
+	"storeUnreachable":{
+		"message" : "无法连接到服务器。请联系技术支持人员以获得帮助，或者检查“帐户设置”中的服务器地址。",
+		"description": "When network and beacon are reachable but store urls are unreachable"
+	},
+	
+	"beaconUnreachable":{
+		"message" : "无法连接到服务器。请联系技术支持人员以获得帮助，或者检查“帐户设置”中的服务器地址。",
+		"description": "Network is present but beacons are unreachable."
+	},
+	
+	"offlinestatus":{
+		"message" : "无法连接到网络。请在网络可用时重试。",
+		"description": ": When offline is detected and when network goes down. "
+	},
+	
+	"policy_applied_config_fail": {
+		"message" : "无法更改此 Receiver 配置。您的管理员使用策略为您配置 Receiver。",
+		"description": "CR configuration failure message when admin has configured using google policies"
+	},
+	
+	
+	"CRA_update_notification":{
+		"message":"新版本的 $1 可用。",
+		"description": "New Chrome Receiver Update Available notification",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+	
+	"CRA_restart_message":{
+		"message" : "重新启动 $1 以进行更新。",
+		"description": "New CRA update Available notification message.",
+		"placeholders": {
+			"app_name" : {
+				"content" : "$1",
+				"example": "Citrix Receiver"
+			}
+		}
+	},
+	
+	"Button_Now":{
+			"message":"立即",
+			"description": "Now button for Chrome Receiver Update Available notification"
+	},
+	
+	"Button_Later":{
+			"message":"稍后",
+			"description": "Later button for Chrome Receiver Update Available notification"
+	},
+	
+	"store_address_change":{
+		"message":"服务器地址已更改。",
+		"description": "When the store address is changed in account settings page"
+	},
+	"restart_now":{
+			"message":"立即重新启动",
+			"description": "Restart Citrix Receiver button text"
+	},
+	"urlPlaceholder": {
+		"message" : "https://URL",
+		"description": "Watermark for URL field in Preferences page"
+	},
+	"thirdPartyLicenses":{
+		"message" : "Receiver for Chrome 第三方声明",
+		"description": "Chrome third party notices link"
+	},
+    "http_error_code_403":{
+      "message" : "无法验证您的凭据。",
+      "description": "When Authentication of user is failed."
+    },
+    "http_error_code_404":{
+      "message" : "Google 云打印服务器不可用。请稍后再试。",
+      "description": "When GCP server is down."
+    },
+    "http_error_code_413":{
+      "message" : "文件太大，无法打印。",
+      "description": "HTTP request size is larger than the size of the request accepted by the GCP server."
+    },
+    "GCP_error_code_default":{
+      "message" : "Google 云打印不可用。请稍后再试。",
+      "description": "Default error string"
+    },
+    "GCP_error_code_111":{
+      "message" : "找不到打印机。请选择其他打印机。",
+      "description": "If printer trying to print to is not found."
+    },
+    "GCP_error_code_403":{
+      "message" : "无法转换为 PDF。",
+      "description": "When the file that is printing to GCP is corrupted."
+    },
+    "GCP_no_printer_error":{
+      "message" : "未在 Google 云打印中设置打印机。请立即设置一台打印机。",
+      "description": "If user account does not contain any printer attached his/her GCP this error is shown"
+    },
+    "add_print_job_to_queue":{
+      "message":"正在将 $session_name$ 中的 $print_job_name$ 添加到队列。",
+      "description": "Adding the print job to queue",
+      "placeholders": {
+          "print_job_name": {
+            "content" : "$1",
+            "example": "Doc1"
+          },
+          "session_name": {
+            "content" : "$2",
+            "example": "会话窗口标题"
+          }
+      }
+    },
+    "printed_file_to_GCP":{
+      "message":"$print_job_name$ 已打印到 $printer_name$",
+      "description": "Printed the file to printer",
+      "placeholders": {
+          "print_job_name": {
+            "content" : "$1",
+            "example": "Doc1"
+          },
+          "printer_name":{
+            "content" : "$2",
+            "example": "打印机名称"
+          }
+      }
+    },
+    "one_time_printer_setup_message":{
+      "message":"如果要通过 Google 云打印进行打印，可以在“打印机设置”中设置该打印方式。",
+      "description":"One time message to user about printer setup."
+    },
+    "connection_center_title":{
+      "message":"连接中心",
+      "description":"Connection Center title message"
+    },
+    "connection_center_description":{
+      "message":"选择一个会话或应用程序以执行操作:",
+      "description":"Description of radio buttons in connection center"
+    },
+    "connection_center_session_buttons_title":{
+      "message":"面向会话的操作:",
+      "description":"Title for session buttons"
+    },
+    "connection_center_app_buttons_title":{
+      "message":"面向应用程序的操作:",
+      "description":"Title for app buttons"
+    },
+    "connection_center_logoff_button":{
+      "message":"注销",
+      "description":"Name for logoff button"
+    },
+    "connection_center_devices_button":{
+      "message":"设备",
+      "description":"Name for preferences button"
+    },
+    "connection_center_disconnect_button":{
+      "message":"断开连接",
+      "description":"Name for disconnect button"
+    },
+    "connection_center_ctrl_alt_del_button":{
+      "message":"Ctrl+Alt+Delete",
+      "description":"Name for ctrl+alt+del button"
+    },
+    "connection_center_terminate_button":{
+      "message":"终止",
+      "description":"Name for terminate button"
+    },
+	"seamless_multimonitor_drop_here":{
+      "message":"拖放到此处以将会话移至此显示器",
+      "description":"Text displayed when moving seamless apps to different monitor"
+    },
+	"sendFeedback":{
+		"message" : "发送反馈",
+		"description": "Send Feedback link text in Account settings"
+	},
+	"generalSettings": {
+		"message" : "常规",
+		"description": "General setting title"
+	},
+	"multimonitorSettingsTitle": {
+		"message" : "多显示器设置",
+		"description": "Multi-monitor settings title"
+	},
+	"multimonitorSettingsCheckboxLabel": {
+		"message" : "使用所有显示器以跨越显示",
+		"description": "Multi-monitor settings checkbox label"
+	},
+	"ceipSettingsTitle": {
+		"message" : "客户体验改善计划",
+		"description": "ceip settings title"
+	},
+	"ceipSettingsCheckboxLabel": {
+		"message" : "通过发送匿名使用情况统计信息来帮助改进 Receiver",
+		"description": "ceip settings checkbox label"
+    }
+
+}

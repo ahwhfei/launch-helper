@@ -1,0 +1,12 @@
+{
+  "program": {
+    "portable": {
+      "pnacl-translate": {
+        "url": "secureica.pexe"
+      },
+      "pnacl-debug": {
+        "url": "secureica_unstripped.bc"
+      }
+    }
+  }
+}

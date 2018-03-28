@@ -1,0 +1,12 @@
+{
+  "program": {
+    "portable": {
+      "pnacl-translate": {
+        "url": "ctxmodule.pexe"
+      },
+      "pnacl-debug": {
+        "url": "ctxmodule_unstripped.bc"
+      }
+    }
+  }
+}

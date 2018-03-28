@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta content=text/html; charset=utf-8 />
+	<meta name="viewport" content="width=620" />
+
+	<title>HTML5 App Launcher</title>
+	<link   rel="SHORTCUT ICON" href="favicon.ico" />
+	<script type="text/javascript">
+	</script>
+</head>
+
+<body onload= "loadF( )">
+	<script type="text/javascript">
+	var doc = document;
+	var serverAdd  = null;
+	var uName = "";
+	var domain  = "picablr";
+	var password  = null;
+	var appName  = null;
+	var wsPortVal = 8080;
+	var html5LaunchData = {};
+	var type = 3 ;
+	var serverAddress = new Array( 3 );
+	/*
+	var serverAddress = [ "" ,
+							"10.8.162.34",
+							"10.8.163.167",
+							"10.8.168.69",
+							"10.8.163.167"]
+	var domianArray = [ "" ,"w71" ,
+							"IE10Test" ,
+							"w71" ,
+							"IE10Test" 
+						]
+	var Username1 = "Administrator" ;
+	var password1 = "citrix" ;
+	*/
+			
+	serverAddress[0] = "";
+	serverAddress[1] = "10.105.108.28" ;//existing html5
+	serverAddress[2] = "10.105.108.20" ;//jpeg
+	serverAddress[3] = "10.105.36.82" ;//broadwar
+	serverAddress[4] = "10.105.108.20" ;//jpeg + webgl 
+	var domianArray = [ "" ,"picablr" ,
+							"picablr" ,
+							"blricad" ,
+							"picablr" 
+						]
+	var Username1 = "Admin" ;
+	var password1 = "Icadev@12" ;
+	
+	function Connect()
+	{
+		try
+		{	if( type == 0 )
+			{
+				alert("please select in drop down menu");
+				return ;
+			}
+			
+			serverAdd 	= document.getElementById("ServerAddress").value;
+			uName  		= document.getElementById("Username").value;
+			domain  	= document.getElementById("Domain").value;
+			password  	= document.getElementById("Password").value;
+			appName  	= document.getElementById("Application").value;
+			wsPortVal	= document.getElementById("wsPort").value;
+			if( (uName =="") || ( password ==""))
+			{
+				alert("please provide username/password");
+				return ;
+			}
+			var icaData = {};
+			var html5LaunchID = 0;
+            icaData['ClientName'] = "HTML5-Receiver";
+			icaData['Domain'] = domain;
+			icaData['ClearPassword'] = password;
+			icaData['type'] = type ;
+			icaData["InitialProgram"] = "#" + appName;
+			icaData['Title'] = appName;
+			icaData['Address'] = serverAdd;
+			icaData['Username'] = uName;
+			icaData['wsPort'] = wsPortVal;
+			html5LaunchData[++html5LaunchID] = icaData;
+			window.icaDwldComplete = true; //this is used by HTML5 Receier to know that icaData is ready.
+			var lURL =  "SessionWindow.html" + '?launchid=' + html5LaunchID ;
+			var w = window.open();
+			w.name = type ;
+			w.document.location = lURL;
+		}
+		catch (error)
+		{
+			alert("Engine crashed: " + error);
+		}
+	}
+	function loadF( )
+	{
+		changeAddress( 3 );
+	}
+	function changeAddress(id )
+	{
+		document.getElementById("Username").value = Username1 ;
+		document.getElementById("Password").value =  password1;
+		document.getElementById("ServerAddress").value = serverAddress[id] ;
+		document.getElementById("Domain").value = domianArray[id];
+		document.getElementById("Application").value = "Desktop" ;
+		document.getElementById("wsPort").value = "8080"
+		if( id == 0 )
+		{
+			document.getElementById("Application").value = "";
+			document.getElementById("wsPort").value ="" ;
+		}
+		type = id ;
+	}
+	</script>
+	 <table >
+<!-- 	 	<tr><th ><font face=arial size=4>Please Select one In Drop Down Menu</font></th>
+	
+	 	<td>
+			 <select  id = "myList"  onChange="changeAddress(this.selectedIndex);">
+		     	<option value = "0">None</option>
+		     	<option value = "1">Existing HTML5</option>
+		        <option value = "2">Frame As JPEG</option>
+		        <option value = "3">BroadWay H264 Decoder</option>
+		        <option value = "4">Frame As JPEG + WebGL</option>
+		    </select>
+	    </td>
+    </tr> -->
+    <tr><td></td></tr>
+     <tr><td></td></tr>
+      <tr><td></td></tr>
+        <tr><td></td></tr>
+     <tr><td></td></tr>
+<!--       <tr><th>Please Provide Citrite domain username /password</th></tr> -->
+        <tr><td></td></tr>
+          
+     <tr><td></td></tr>
+      <tr><td></td></tr>
+        <tr><td></td></tr>
+     <tr><td></td></tr>
+      <tr><td></td></tr>
+   	<tr>
+   		<td>User Name  </td>
+   		<td><input id="Username" name="Username"  value=""/>  </td>
+   	</tr>
+   	<tr>
+   		<td>Password </td>
+   		<td><input type="password" id="Password" name="Password" value=""/> </td>
+   	</tr>
+   	</tr>
+   
+   	
+   	 </tr>
+    <tr><td></td></tr>
+     <tr><td></td></tr>
+      <tr><td></td></tr>
+        <tr><td></td></tr>
+     <tr><td></td></tr>
+      </tr>
+    <tr><td></td></tr>
+     <tr><td></td></tr>
+      <tr><td></td></tr>
+        <tr><td></td></tr>
+     <tr><td></td></tr>
+   	
+   	<tr>
+   		<td>Domain   </td>
+   		<td><input id="Domain" name="Domain"  value=""/></td>
+   	</tr> 
+   	<tr>
+   		<td>AppName    </td>
+   		<td><input id="Application" name="Application" value=""/></td>
+   	</tr> 
+   	<tr>
+   		<td>Port   </td>
+   		<td><input id="wsPort" name="wsPort"  value=""/></td>
+   	</tr> 
+   	<tr>
+   		<td>ServerAddress   </td>
+   		<td> <input id="ServerAddress"  name="ServerAddress=" value=""/></td>
+   	</tr> 
+   		<tr>
+   		<td></td>
+   		<td></td>
+   		<tr>
+   			</tr>
+   			<tr>
+   			</tr>
+   			<tr>
+   			</tr>
+   		<td><button id="Connect" name="Connect" onClick="Connect();">Connect</button></td>
+   	</tr>
+   	
+   </table>
+   <h4 align="center">Copyright @ Citrix Systems 2012</h4>
+</body>
+
+</html>
+

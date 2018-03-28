@@ -1,0 +1,263 @@
+/* This is related to the "Account Settings" page*/
+/*
+font file for citrixsans light is taken from https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-sans/citrixsans-light.eot 
+similarly other font file are taken from the link https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-sans/[file-name]
+font-weight is taken from the following link- https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-fonts-linking.css
+*/
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 400;
+	src:url("/resources/fonts/citrixsans/citrixsans-regular.eot");
+	src:url("/resources/fonts/citrixsans/citrixsans-regular.eot?") format('eot'),
+		url("/resources/fonts/citrixsans/citrixsans-regular.woff") format("woff"),
+		url("/resources/fonts/citrixsans/citrixsans-regular.ttf") format("truetype"),
+		url("/resources/fonts/citrixsans/citrixsans-regular.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 700;
+	 src:url("/resources/fonts/citrixsans/citrixsans-bold.eot");
+	 src:url("/resources/fonts/citrixsans/citrixsans-bold.eot?") format('eot'),
+		url("/resources/fonts/citrixsans/citrixsans-bold.woff") format("woff"),
+		url("/resources/fonts/citrixsans/citrixsans-bold.ttf") format("truetype"),
+		url("/resources/fonts/citrixsans/citrixsans-bold.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg"); 
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 700;
+	src:url("/resources/fonts/citrixsans/citrixsans-bolditalic.eot");
+	src:url("/resources/fonts/citrixsans/citrixsans-bolditalic.eot?") format('eot'),
+		url("/resources/fonts/citrixsans/citrixsans-bolditalic.woff") format("woff"),
+		url("/resources/fonts/citrixsans/citrixsans-bolditalic.ttf") format("truetype"),
+		url("/resources/fonts/citrixsans/citrixsans-bolditalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 400;
+	src:url("/resources/fonts/citrixsans/citrixsans-italic.eot");
+	src:url("/resources/fonts/citrixsans/citrixsans-italic.eot?") format('eot'),
+		url("/resources/fonts/citrixsans/citrixsans-italic.woff") format("woff"),
+		url("/resources/fonts/citrixsans/citrixsans-italic.ttf") format("truetype"),
+		url("/resources/fonts/citrixsans/citrixsans-italic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 200;
+	src:url("/resources/fonts/citrixsans/citrixsans-light.eot");
+	src:url("/resources/fonts/citrixsans/citrixsans-light.eot?") format('eot'),
+		url("/resources/fonts/citrixsans/citrixsans-light.woff") format("woff"),
+		url("/resources/fonts/citrixsans/citrixsans-light.ttf") format("truetype"),
+		url("/resources/fonts/citrixsans/citrixsans-light.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 200;
+	src:url("/resources/fonts/citrixsans/citrixsans-lightitalic.eot");
+	src:url("/resources/fonts/citrixsans/citrixsans-lightitalic.eot?") format('eot'),
+		url("/resources/fonts/citrixsans/citrixsans-lightitalic.woff") format("woff"),
+		url("/resources/fonts/citrixsans/citrixsans-lightitalic.ttf") format("truetype"),
+		url("/resources/fonts/citrixsans/citrixsans-lightitalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 600;
+	src:url("/resources/fonts/citrixsans/citrixsans-semibold.eot");
+	src:url("/resources/fonts/citrixsans/citrixsans-semibold.eot?") format('eot'),
+		url("/resources/fonts/citrixsans/citrixsans-semibold.woff") format("woff"),
+		url("/resources/fonts/citrixsans/citrixsans-semibold.ttf") format("truetype"),
+		url("/resources/fonts/citrixsans/citrixsans-semibold.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 600;
+	src:url("/resources/fonts/citrixsans/citrixsans-semibolditalic.eot");
+	src:url("/resources/fonts/citrixsans/citrixsans-semibolditalic.eot?") format('eot'),
+		url("/resources/fonts/citrixsans/citrixsans-semibolditalic.woff") format("woff"),
+		url("/resources/fonts/citrixsans/citrixsans-semibolditalic.ttf") format("truetype"),
+		url("/resources/fonts/citrixsans/citrixsans-semibolditalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+/* Use the same fonts for all the elements for consistency */
+body {
+	font-family: "citrixsans","Helvetica Neue", "Helvetica", "Arial", "Sans Serif" !important
+}
+#settings-page-background
+{
+    background-color:rgba(0,0,0,0.25);
+
+    position:fixed;
+    height:100%;
+    width:100%;
+    left:0px;
+    top:0px;
+}
+.settings-container
+{
+    min-width:524px;
+    width:524px;
+    min-height:467px;
+    height:467px;
+
+    border:1px solid rgba(255,255,255,.28);
+    background-color:rgba(255,255,255,0.05);
+    box-shadow:inset 4px 6px 7px rgba(0,0,0,.09), 0 0 6px rgba(0,0,0,.08);
+    -moz-box-shadow:inset 4px 6px 7px rgba(0,0,0,.09), 0 0 6px rgba(0,0,0,.08);
+    -webkit-box-shadow:inset 4px 6px 7px rgba(0,0,0,.09), 0 0 6px rgba(0,0,0,.08);
+     
+    position:absolute;
+    top:18.5%;
+    left:50%;
+    right:50%;
+    margin-left:-262px; /*50% of the width*/
+}
+#settings-container-background
+{
+    background-image:url("/resources/images/bubble_bg.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    -webkit-filter:blur(5px); /* PD recommendation is 50px - at which the page becomes translucent and start to see elements of underneath page */
+}
+#settings-container-layout
+{
+}
+#settings-close-button
+{
+    background:url("/resources/images/close_button.png");
+    border:0 none;
+
+    min-width:17px;
+    min-height:17px;
+    width:17px;
+    height:17px;
+    
+    position:absolute;
+    right:22px;
+    top:22px;
+    padding:2px;
+}
+#settings-close-button:focus
+{
+    opacity:0.25;
+}
+#settings-close-button:hover
+{
+    opacity:0.25;
+}
+#settings-close-button:active
+{
+    opacity:0.35;
+}
+#settings
+{
+    border:0 none;
+    
+    position:absolute;
+    left:24px;
+    top:36px;
+    right:24px;
+    bottom:24px;
+}
+#settings-title
+{
+    font-weight:200; /* Light */
+    font-size:20px;
+    color:#FFFFFF;
+    
+    margin-bottom:32px;
+}
+#storefront-settings
+{
+    border:0 none;
+    
+    margin-bottom:36px;
+}
+.settings-input
+{
+    font-weight:400; /* Regular */
+    font-size:14px;
+    color:#FFFFFF;
+
+    padding-left:11px;
+}
+.settings-input:focus
+{
+    box-shadow:0 0 5px 1px rgba(0,210,255,.5), inset 0 3px 0 0 rgba(0,0,0,.1); 
+    outline:none;
+    
+    background-color:rgba(255,255,255,1) !important;
+    color:#000000;
+    opacity:1;
+}
+#storefront-settings-value
+{
+    min-width:338px;
+    width:338px;
+    min-height:28px;
+    height:28px;
+
+    border:1px solid rgba(255,255,255,.5);
+    background-color:rgba(255,255,255,.05);
+
+    margin-right:10px;
+}
+#storefront-settings-value-apply-button
+{
+    color:rgba(255,255,255,0.38);
+}
+.settings-button
+{
+    font-weight:600; /* SemiBold */
+    font-size:14px;
+    text-align:center;
+    color:#FFFFFF;
+    float: right;
+    background-color: rgba(255,255,255,0.1);
+    border:0;
+    padding:0;
+    outline:0;
+
+    height:32px;
+    width:114px;
+}
+.settings-button:focus
+{
+    background-color: rgba(255,255,255,0.25);
+}
+.settings-button:hover
+{
+    background-color: rgba(255,255,255,0.25);
+}
+.settings-button:active
+{
+    background-color: rgba(255,255,255,0.35);
+}
+.settings-label
+{
+    font-weight:600; /* SemiBold */
+    font-size:14px;
+    color:#FFFFFF;
+    margin-bottom:9px;
+}
+.settings-log
+{
+    border:0;
+    padding:0;
+
+    height:255px;
+    width:476px;
+}

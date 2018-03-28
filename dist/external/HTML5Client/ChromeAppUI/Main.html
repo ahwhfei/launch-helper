@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta content=text/html; charset=utf-8/>
+    <meta name="viewport" content="width=620"/>
+    <title>Citrix Receiver</title>
+    <link href="css/ctxs.chromeapp.css" rel="stylesheet" type="text/css"/>
+    <script src="js/CtxMessage.js" type="text/javascript"></script>
+    <script src="/Common/NetPromoters.js" type="text/javascript"></script>
+</head>
+
+<body class="prefs-bg">
+  <div id='parent'>
+    
+  
+<iframe id="preferences" src="Preferences.html"></iframe>
+<div id="main">
+    <div id="main_pspinner" class="pspinner spinnerRotate"></div>
+    <a href="#" id="account_settings"></a>
+	<a href="#" id="reload_settings" ></a>
+    <a href="#" id="printer_settings"></a>
+
+    <div id="embeddedErrorDialog"></div>
+    <div id="settingsPageBackground">
+        <div id="settingsPageContainer">
+            <div id="settingsPage">
+                <div class="settingsTabs">
+                    <input type="radio" id="AccountSettings" name="settings-tabs" checked/>
+                    <label id="accountSettingsLabel" for="AccountSettings" tabindex="0"></label>
+
+                    <div id="settings" class="settingsTabContent">
+
+                        <!--<div id="settings-title"></div>-->
+                        <div id="storefront-settings">
+                            <div class="settings-label" id="storefront-settings-label"></div>
+                            <input id="storefront-settings-value" spellcheck="false" tabindex="0"/>
+                            <button class="settings-button" id="storefront-settings-value-apply-button"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="settingsTabs" id="printerSettingsTabContainer">
+                    <input type="radio" id="printerSettings" name="settings-tabs"/>
+                    <label id="printerLabel" for="printerSettings" tabindex="0"></label>
+
+                    <div id="printerSettingTabContent" class="settingsTabContent">
+                        <p></p>
+                        <input id="openPDF" type="radio" name="printer-option" tabindex="0"/>
+                        <label for="openPDF"></label>
+
+                        <p></p>
+                        <input id="googleCloudPrint" type="radio" name="printer-option" tabindex="0"/>
+                        <label for="googleCloudPrint"></label>
+
+                        <p></p>
+                        <select id="printerList" tabindex="0"></select>
+                        <a href="https://support.google.com/cloudprint" target="_blank"></a>
+
+                        <div id="printSettingsButtonContainer" tabindex="0">
+                            <button id="printSettingDoneButton" class="commonButton primaryButton" tabindex="-1"></button>
+                        </div>
+                        <p class="printing_support_warning_message" tabindex="-1"></p>
+                    </div>
+                </div>
+				<div class="settingsTabs" id="generalSettingsTabContainer">
+                    <input type="radio" id="generalSettings" name="settings-tabs"/>
+                    <label id="generalSettingsLabel" for="generalSettings" tabindex="0"></label>
+
+                    <div id="generalSettingTabContent" class="settingsTabContent">
+                        <div id ='multimonitorSettings' class='generalSettingContent'>
+							<p id='multimonitorSettingsTitle' class='generalSettingTitle'></p>
+							<input type='checkbox' id='multimonitorCheckbox' checked>
+							<label for='multimonitorCheckbox' class='generalSettingDesc'></label>
+						</div>
+						<div id='ceipSettings' class='generalSettingContent'>
+							<div id ='ceipSettings'>
+							<p id='ceipSettingsTitle' class='generalSettingTitle'></p>
+							<input type='checkbox' id='ceipCheckbox' checked>
+							<label for='ceipCheckbox' class='generalSettingDesc'></label>
+						</div>
+						</div>
+                    </div>
+                </div>
+                <div class="close_button" id="settingsCloseButton" tabindex="0"></div>
+            </div>
+            <div id="thirdPartyLicensesDiv">
+					<span class="thirdPartyLinkSpan">
+						<a href="#" id="thirdPartyLicensesLink"></a>
+						<a href="#" id="sendFeedback"></a>
+					</span>
+            </div>
+        </div>
+    </div>
+</div>
+<template id="templatePDF">
+    <div id="KioskPDF">
+        <webview id="webviewPrint"></webview>
+        <script src="../../src/Business/Main/VirtualDriver/Printer/Print.js" type="text/javascript"></script>
+        <span class="kioskCloseBtn" id="closePDFBtn"></span>
+    </div>
+</template>
+<template id="templateLicenses">
+    <div id="KioskLicenses">
+        <iframe id="thirdPartyLicenses" src="ReceiverThirdPartyNotices.html"></iframe>
+        <span class="kioskCloseBtn" id="closeLicensesBtn"></span>
+    </div>
+</template>
+</div>
+</body>
+
+<script src="../../Common/CommonUtils.js" type="text/javascript"></script>
+<script src="../../Common/CEIP.js" type="text/javascript"></script>
+<script src="../../Common/HTML5CommonInterface/HTML5Interface.js" type="text/javascript"></script>
+<script src="js/Utils.js" type="text/javascript"></script>
+<script src="js/Config.js" type="text/javascript"></script>
+<script src="js/Storage.js" type="text/javascript"></script>
+<script src="js/Main.js" type="text/javascript"></script>
+<script src="js/PrinterSetting.js" type="text/javascript"></script>
+<script src="../../src/Business/CtxDialog/Logger/log.js" type="text/javascript"></script>
+</html>

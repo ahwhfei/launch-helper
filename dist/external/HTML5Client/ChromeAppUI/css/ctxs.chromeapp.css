@@ -1,0 +1,930 @@
+﻿/*
+font file for citrixsans light is taken from https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-sans/citrixsans-light.eot 
+similarly other font file are taken from the link https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-sans/[file-name]
+font-weight is taken from the following link- https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-fonts-linking.css
+*/
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 400;	
+	src:url("/resources/fonts/citrixsans/citrixsans-regular.woff") format("woff");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 700;	 
+	src:url("/resources/fonts/citrixsans/citrixsans-bold.woff") format("woff");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 200;
+	src:url("/resources/fonts/citrixsans/citrixsans-light.woff") format("woff");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 600;
+	src:url("/resources/fonts/citrixsans/citrixsans-semibold.woff") format("woff");
+}
+
+
+/* Use the same fonts for all the elements for consistency */
+/*BUG0623810 : Web fonts not loading properly due to caching optimisation in Chrome app.
+Removed citrixsans here and is applied through inline styling*/
+body ,button{
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "Sans Serif";
+}
+
+#overlay {
+	visibility:hidden;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width:100%;
+	height:100%;
+	text-align:center;
+	z-index: 0;
+}
+
+.dialog-box{
+	position:absolute;	
+	display:none;
+	background-color:  #ffffff;
+	box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.35);
+	width: 490px;
+	margin : 0px 40px;
+	min-height: 100px;
+}
+.errorDialogBody{
+	display: table-cell;
+	vertical-align: middle;
+}
+.errorDialogOkButton{
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+}
+.dialog-button {
+    position: relative;
+	text-align:center;
+	background-color:  #02a1c1;
+	min-width: 100px;
+	height: 30px;
+	color:  #ffffff;
+	font-size: 12px; 
+	line-height : 12px;
+	font-weight : bold;
+}
+
+.unsecure_imagebox {
+	display: table-cell;
+	position: absolute;
+	background: url("/resources/images/warningIcon.png") no-repeat;
+	width: 32px;
+	height: 32px;
+	margin: 0px 10px 0px 32px;
+}
+.dialog-message
+{
+	position: relative;
+	color: #000000;
+	height: auto;
+	font-size: 16px;
+	text-align: center;
+	word-wrap: break-word;
+	margin : 40px 25px 20px 25px
+
+}
+.unsecureURLHeaderMsg
+{
+	position:relative;
+	font-size: 22px;
+	text-align:left;
+	word-wrap: break-word ;
+	margin : 25px 40px 0px 70px;
+	color:  #666666;
+}
+.unsecureURLMsg
+{
+	position:relative;	
+    margin: 10px 70px 40px 70px;		
+	word-wrap: break-word ;
+	color:  #666666;
+	font-size: 14px; 
+	line-height: 18px; 
+	text-align: left;
+}
+/* Message.html */
+.message-title-bar
+{
+	-webkit-app-region: drag;
+}
+.message-title-text
+{
+	position:relative;
+	color:#000000;
+	height:auto;
+	font-size: 17px;
+	font-weight: bold;
+	text-align:left;
+	word-wrap: break-word ;
+	margin:20px;
+}
+a.message-close
+{
+	-webkit-app-region: no-drag;
+	position:absolute;
+	text-align:center;
+    text-decoration: none;
+	color:#CCC;
+	font-size: 15px;
+	font-weight: bold;
+	width: 17px;
+	height: 16px;
+	right: 20px;
+	top: 20px;
+	border: none;
+	background-image: url("/resources/images/icon_close.png");
+}
+a.message-close:hover
+{
+	font-size: 17px;
+	font-weight:bold;
+	color:#000;
+    cursor: pointer;
+}
+.message-desc
+{
+	position:relative;
+	color:#000000;
+	height:auto;
+	margin:20px;
+	font-size: 15px;
+	text-align:left;
+	word-wrap: break-word ;
+}
+.message-details{
+	position:relative;
+	color:#000000;
+	height:auto;
+	font-size: 15px;
+	text-align:left;
+	word-wrap: break-word ;
+	margin:20px;
+}
+.message-button {
+	font-size: 14px;
+    text-align:center;
+    height:30px;
+    min-width:80px;
+	color : #FFFFFF;
+}
+.msgButtonsDiv{
+	float : right;
+	margin-right : 20px;
+	margin-bottom : 20px;
+}
+
+#msg-add{
+	margin-left : 20px;
+	background-color : #02a1c1;
+	outline :  2px solid #02a1c1;
+}
+#msg-add:hover{
+	background-color:  rgba(2, 161, 193, 0.6);
+	outline :  2px solid  rgba(2, 161, 193, 0.6);
+} 
+#msg-add:focus{	
+	border : 1px solid #FFFFFF;
+}
+#msg-add:active{
+	background-color:  rgba(2, 161, 193, 0.6);
+	outline :  2px solid  rgba(2, 161, 193, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+}
+
+#msg-cancel{
+	background-color : #bbbbbb;
+	outline :  2px solid #bbbbbb;
+}
+#msg-cancel:hover{
+	background-color:  rgba(187,187,187, 0.6);
+	outline :  2px solid rgba(187,187,187, 0.6);
+}
+#msg-cancel:active{
+	background-color:  rgba(187,187,187, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+	outline :  2px solid rgba(187,187,187, 0.6);
+}
+#msg-cancel:focus{
+	border : 1px solid #FFFFFF;
+}
+
+.unsecureWarningHeaderDiv{
+	clear : both;
+}
+.unsecureWarningCheckboxDiv{	
+	margin : 0px 70px 30px 70px;
+}
+.checkboxURL{
+	margin-left: 2px;
+}
+.labelClassURL{
+	color:#666666;
+	font-size: 14px;
+	text-align:left;
+	word-wrap: break-word ;
+}
+.insecureButtonDiv{
+    float: right;
+    margin: 0px 40px 25px 0px;
+}
+button{
+	border : 0;
+	margin : 0;
+	outline : none;
+}
+button:hover:active:focus, button:focus:hover:active, button:focus:active{
+	border : 0;
+	outline : none;
+}
+.dialog-button1 {
+    position: relative;
+	text-align:center;
+	background-color:  #02a1c1;
+	min-width: 150px;
+	height: 30px;
+	color:  #ffffff;
+	font-size: 16px; 
+	margin-right : 10px;
+	outline :  2px solid #02a1c1;
+}
+.dialog-button1:hover{
+	background-color:  rgba(2, 161, 193, 0.6);
+	outline :  2px solid  rgba(2, 161, 193, 0.6);
+} 
+.dialog-button1:focus{	
+	border : 1px solid #FFFFFF;
+}
+.dialog-button1:active{
+	background-color:  rgba(2, 161, 193, 0.6);
+	outline :  2px solid  rgba(2, 161, 193, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+}
+
+.dialog-button2 {
+	background-color:  #bbbbbb;
+	min-width: 150px;
+	height: 30px;
+	color:  #ffffff;
+	font-size: 16px;
+	text-align: center;
+	outline :  2px solid #bbbbbb;
+}
+.dialog-button2:hover{
+	background-color:  rgba(187,187,187, 0.6);
+	outline :  2px solid rgba(187,187,187, 0.6);
+}
+.dialog-button2:active{
+	background-color:  rgba(187,187,187, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+	outline :  2px solid rgba(187,187,187, 0.6);
+}
+.dialog-button2:focus{
+	border : 1px solid #FFFFFF;
+}
+
+/* Preference.html related */
+.ctxsui-authentication-loginBox
+{
+    width:100%;
+    min-width:800px;    
+    position:fixed;
+    margin-top:-145px;
+    top:50%;
+	background-color : rgba(63, 54, 67, 0.8);
+	display : table;	
+	min-height: 240px;
+}
+.ctxsui-authentication-loginBox-innerBox{
+	display: table-cell;
+	width: 486px;
+}
+ .ctxsui-authentication-loginBox-innerBox-logo{
+	height: 52px;
+	min-width: 157px;
+	background-image: url("/ChromeAppUI/resources/images/auth_receiver_logo.png");
+	border: 0;
+	display: table-cell;
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+.ctxsui-authentication-loginBox-innerBox-withoutlogo{
+	min-width: 157px;
+	height: 52px;
+	border: 0;
+	display: table-cell;
+	float : right;
+}
+
+.enterurllabel{
+	position: absolute;
+	width: 100px;
+	left: 20px;
+	top: 60px;
+	color: #FFFFFF;
+	font-size: 17px;
+	line-height: 16px;
+	opacity: 0.4;
+}
+#_inner_box{
+	position: absolute;
+	top: 0px;
+	width: 486px;
+	min-height: 240px;
+}
+#URL{
+	font-size: 16px;
+	background-color: #FFFFFF;
+	border: 0;
+	outline: none;
+	width: 375px;
+	height: 34px;
+	left: 125px;
+	position: relative;
+	padding: 5px 5px;
+	color: #666666;
+	top: 50px;
+}
+.button_connect{
+	border: 0;
+	height: 44px;
+	width: 385px;
+	 position: relative;
+	left: 125px;
+	top: 50px; 
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 16px;
+	text-align: center;
+	background-color: #02a1c1;
+	margin-top: 30px;	
+}
+/* can be combined to put in a common class for blue and gray buttons*/
+.button_connect:hover{
+	background-color:  rgba(2, 161, 193, 0.6);
+}
+.button_connect:active{
+	background-color:  rgba(2, 161, 193, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+}
+.button_connect:focus{
+	outline : 2px solid #02a1c1;
+	border : 1px solid #FFFFFF;
+}
+#account_settings
+{
+	position: absolute;
+    bottom: 24px;
+    right: 24px;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+	display: none;
+}
+
+#reload_settings
+{
+	position: absolute;
+    bottom: 24px;
+    right: 60px;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+	display:none;
+}
+
+#reload_image:hover{
+    opacity: 1;
+}
+
+#reload_image {
+	height: 20px;
+    width: 20px;
+    background-image: url("../resources/images/reload_webview.png");
+    position: relative;
+    margin-right: 10px;
+    top: 5px;
+    left: 5px;
+    opacity: 0.8;
+    float: left;
+}
+
+#account_settings_image {
+	height: 20px;
+    width: 20px;
+    background-image: url("../resources/images/icon_settings.png");
+    position: relative;
+    margin-right: 20px;
+    top: 5px;
+    left: 5px;
+    opacity: 0.8;
+    float: left;
+}
+
+#account_settings_image:hover{
+    opacity: 1;
+}
+
+#account_settings_link{
+	 padding-right: 10px;
+}
+
+.prefs-bg { 
+	background: url("/resources/images/auth_bg.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+#inlineErrorContainer{
+	width: 370px;
+	position: relative;
+	top: 50px;
+	display: none;
+	left: 120px;
+	text-align: left;
+	padding-left: 24px;
+	padding-top: 0;
+	list-style: none outside none;
+	background-image: url("/ChromeAppUI/resources/images/icon_error.png");
+	background-repeat: no-repeat;
+	background-position: 1px 1px;
+	min-height: 32px;
+	margin-top: 20px;
+}
+
+.inline_error{
+	position: relative;
+	left: 10px;
+	top : 8px;
+	list-style: none outside none;	
+	width: 300px;
+	color: #fee8c0;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 300;
+}
+
+#embeddedErrorDialog {
+	margin-top: -110px;
+	display: none;
+	background-color: rgba(63,54,67,0.8);
+	width: 100%;
+	height: 220px;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+}
+.embeddedError {
+	vertical-align: middle;
+	display: table-cell;
+	color:  #fee8c0;
+	font-size: 14px; 
+	line-height: 18px;
+	text-align: center;
+	font-weight: 400;
+	padding: 0px 160px;
+}
+/*In Kiosk mode,session iframe styling*/
+#sessionwindow{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width : 100%;
+	height : 100%;
+	border : 0px;
+}
+/*preferences iframe styling*/
+#preferences{
+	display : none;
+	position :  absolute;
+	top : 0px;
+	left: 0px;
+	border : 0px;
+	width : inherit;
+	height : 100%;
+	max-width:inherit;
+	max-height : inherit;
+}
+#main{
+	display : none;
+	width:inherit;
+	height:inherit;
+	max-width:inherit;
+	max-height : inherit;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#parent{
+  width:100%;
+  height:100%;
+}
+.kioskCloseBtn{
+    position: absolute;
+	top: 10px;
+	right : 0px;
+	background-image : url("/ChromeAppUI/resources/images/icon_close_pdf.png");
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin :0px 25px 0px 10px;
+}
+#webviewPrint, #thirdPartyLicenses{
+    position: absolute;
+    top: 1px;
+    width: 100%;
+    height: 100%;
+    width : inherit;
+    height : inherit;
+}
+.pspinner {
+	display : inline-block;
+	width:28px;
+	height:28px;
+	background: url("/resources/images/spinner28x28.png") no-repeat;
+	visibility:hidden;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	margin-left : -14px;
+	margin-top : -14px;
+}
+.spinnerRotate {
+	-webkit-animation: rotate 0.8s steps(4) infinite;
+	-moz-animation: rotate 0.8s steps(4) infinite;
+	animation: rotate 0.8s steps(4) infinite;
+}
+
+@-webkit-keyframes rotate
+{
+	0%   {}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate
+{
+	0%   {}
+	100% {-moz-transform: rotate(360deg);}
+}
+@keyframes rotate
+{
+	0%   {}
+	100% {transform: rotate(360deg);}
+}
+.close_button{
+	background-image : url("/resources/images/icon_close.png");
+	width : 17px;
+	height : 16px;
+	float : right;
+	margin :  12px 12px 0px 0px; /* body margin 8px + 12px = 20px*/
+}
+.close_button:focus{
+    opacity:0.5;
+}
+.close_button:hover{
+    opacity:0.5;
+}
+.close_button:active{
+    opacity:0.35;
+}
+
+#storefront-settings
+{
+    border:0 none;
+    margin-bottom:30px;
+}
+
+#storefront-settings-value
+{
+	width: 620px;
+	height: 30px;
+	border: 1px solid #999999;
+	margin-right: 10px;
+	padding: 5px 10px;
+	background-color: #ffffff;
+	color: #666666;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: left;
+	outline : none;
+}
+.settings-button
+{
+    font-weight:600; /* SemiBold */
+    font-size:14px;
+    text-align:center;
+    color:rgba(255,255,255,0.6);
+    background-color: rgba(2, 161, 193, 0.5);
+    border:0;
+    padding:0;
+    margin-top: 10px;
+    height:40px;
+    width:87px;
+	outline :  1px solid rgba(2, 161, 193, 0.5);
+}
+.settings-button:hover{
+	background-color:  rgba(2, 161, 193, 0.6);
+	color:#FFFFFF;
+	outline :  1px solid rgba(2, 161, 193, 0.6);
+}
+
+.settings-button:focus{
+	border : 1px solid #FFFFFF;
+}
+.settings-button:active{
+	background-color:  rgba(2, 161, 193, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+	outline :  1px solid rgba(2, 161, 193, 0.6);
+}
+.settings-label
+{
+    margin-bottom:9px;
+	color:  #666666;
+	font-size: 14px; 
+	font-weight: 700;
+	line-height: 18px; 
+	text-align: left;
+}
+.settings-log
+{
+	border: 0;
+	padding: 0;
+	height: 220px;
+	width: 640px;
+}
+#thirdPartyLicensesDiv{
+	height: 36px;
+    background-color: #eeeeee;
+	display: table;
+	width: 100%;
+	position: absolute;
+    bottom: 0;
+}
+.thirdPartyLinkSpan{	
+    vertical-align: middle;
+	display: table-cell;
+}
+#thirdPartyLicensesLink{
+	text-decoration : none;
+	color: #02a1c1;
+	font-size: 14px;
+	float:left;
+	margin-left: 40px;
+}
+#sendFeedback{
+	text-decoration: none;
+    color: #02a1c1;
+    font-size: 14px;
+    min-width: 100px;
+    display: table-cell;
+	float: right;
+	margin-right : 40px;
+}
+/*Needed for Kiosk mode*/
+#closeLicensesBtn{
+	position : absolute;
+	right: 5px;
+	top: 15px;
+}
+#KioskLicenses{
+	display : none;
+	width:inherit;
+	height:inherit;
+	max-width:inherit;
+	max-height : inherit;
+	position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+/*preferences container*/
+#settingsPageBackground {
+    display:none;
+    position: absolute;
+    background-color: rgba(51, 51, 51, 0.5);
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width:inherit;
+	max-width:inherit;
+	max-height : inherit;
+}
+
+#settingsPageContainer {
+    position: absolute;
+    width: 720px;
+    height: 525px;
+    top: 50%;
+    left: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, .28);
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.35);
+    -webkit-box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.35);
+    transform: translate(-50%, -50%);
+}
+
+#settingsPage {
+    height: 50px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.settingsTabs {
+    float: left;
+}
+
+.settingsTabs:first-child {
+    margin-left: 30px;
+}
+
+.settingsTabs > [type=radio] {
+    display: none;
+}
+
+.settingsTabs > label {
+    display: inline-block;
+    font-size: 22px;
+    color: #333333;
+    cursor: default;
+    padding: 20px 15px 0 15px;
+}
+
+.settingsTabs > [type=radio]:checked ~ label {
+    color: #02a1c1;
+    border-bottom: 4px solid #02a1c1;
+}
+
+.settingsTabContent {
+    position: absolute;
+    right: 0;
+    bottom: 36px;
+    left: 0;
+    top: 50px;
+    display: none;
+    margin: 30px 40px 35px 40px;
+}
+
+.settingsTabs > [type=radio]:checked ~ .settingsTabContent {
+    display: block;
+}
+
+/*Printer settings content*/
+
+#printerSettingTabContent{
+    color: #666666;
+}
+
+#printerSettingTabContent:first-child {
+    margin: 30px;
+}
+
+#printerSettingTabContent p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+#printerSettingTabContent p:not(:first-child), #printerSettingTabContent a, #printerList {
+    margin: 5px 0 0 20px;
+}
+
+#printerSettingTabContent p:last-child{
+    font-size: 12px;
+    margin: 30px 0 0 0;
+}
+
+#printerSettingTabContent [type='radio'] {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url('/ChromeAppUI/resources/images/radio_button_unchecked.png');
+}
+
+#printerSettingTabContent [type='radio']:checked{
+    background-image: url('/ChromeAppUI/resources/images/radio_button_checked.png');
+}
+
+#printerSettingTabContent [type='radio']:disabled{
+    background-image: url('/ChromeAppUI/resources/images/radio_button_disabled.png');
+}
+
+#printerSettingTabContent label {
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 17px;
+}
+
+#printerSettingTabContent [type='radio'], #printerSettingTabContent label {
+    margin: 30px 0 0 0;
+}
+
+#printerList {
+    width: 396px;
+    height: 44px;
+    font-size: 16px;
+    color: #666666;
+    background-color: white;
+}
+
+#printerList:disabled{
+    border-color: #CCCCCC;
+}
+
+#printerSettingTabContent a {
+    font-size: 14px;
+    color: #02a1c1;
+    text-decoration: none;
+    display: block;
+}
+#printSettingsButtonContainer{
+	display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+
+#printSettingsButtonContainer:after{
+    clear: both;
+    display:block;
+    content: "";
+    height: 0;
+    visibility: hidden;
+}
+.commonButton{
+    font-weight:600; /* SemiBold */
+    font-size:14px;
+    text-align:center;
+    color: white;
+    float: right;
+    height:40px;
+    width:134px;
+    margin-top: 30px;
+}
+
+.primaryButton{
+	background-color: #02a1c1;
+	margin : 0px;	
+	float : right;
+}
+.primaryButton:hover{
+	background-color: #2A8A9E;
+}
+.primaryButton:active{
+	background-color: #087F97;
+}
+.primaryButton:disabled{
+    background-color: #02A1C1;
+    opacity: 0.6;
+}
+.printing_support_warning_message{
+	clear : both;
+}
+#KioskPDF{
+  position :absolute;
+  top:0px;
+  left:0px;
+  width:inherit;
+  height:inherit;
+  z-index:15;
+  max-width:inherit;
+	max-height : inherit;
+}
+
+.generalSettingTitle{
+	font-size: 14px;
+    font-weight: bold;
+    vertical-align: top;
+    line-height: 17px;
+	margin-top: 0px;
+}
+
+.generalSettingDesc{
+	font-size:14px
+}
+
+.generalSettingContent{
+	margin-bottom: 15px;
+}
