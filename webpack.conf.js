@@ -11,13 +11,14 @@ module.exports = {
             poll: 1000
         }
     },
+    devtool: 'source-map',
     entry: './app/index.js',
     output: {
         filename: 'launch-helper.min.js',
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        new UglifyJSPlugin(),
+        // new UglifyJSPlugin(),
         new CopyWebpackPlugin([{
                 from: 'HDXEngine.html',
                 to: 'HDXEngine.html'
