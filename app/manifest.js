@@ -5,7 +5,7 @@ class Manifest {
         window.manifest || (window.manifest = {});
 
         const helperElement = new HelperElement();
-        this.xenDesktopApi = helperElement.xenDesktopApi;
+        this.xdApi = helperElement.xdApi;
         this.staticResource = helperElement.staticResource || window.location.origin;
     }
 
@@ -13,8 +13,8 @@ class Manifest {
         return window.manifest;
     }
 
-    set xenDesktopApi(url) {
-        window.manifest.xenDesktopApi || (window.manifest.xenDesktopApi = url);
+    set xdApi(url) {
+        window.manifest.xdApi = url;
     }
 
     set staticResource(url) {

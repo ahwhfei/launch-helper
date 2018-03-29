@@ -17,7 +17,7 @@ class HelperElement {
         return this._element.getAttribute('method') || 'GET';
     }
 
-    get xenDesktopApi() {
+    get xdApi() {
         return this._element.getAttribute('api');
     }
 

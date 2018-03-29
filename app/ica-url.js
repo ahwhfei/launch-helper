@@ -7,7 +7,7 @@ class IcaUrl {
     }
 
     get _xenDesktopApi() {
-        return manifest.xenDesktopApi.replace('[customer]', userInstance.user.customer);
+        return manifest.xdApi.replace('[customer]', userInstance.user.customer);
     }
 }
 
