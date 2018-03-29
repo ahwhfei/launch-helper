@@ -13,7 +13,7 @@ class IcaJson {
         const response = await fetch(IcaUrl.url, {
             method: method,
             body: JSON.stringify({
-                SessionId: window.sessionId
+                SessionId: window.cwcSessionId
             }),
             headers: {
                 Authorization: `CWSAuth bearer=${userInstance.user.token}`,
