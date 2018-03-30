@@ -10,16 +10,21 @@ class IcaJson {
     async _fetchIcaJson() {
         const method = new HelperElement().method;
 
-        const response = await fetch(IcaUrl.url, {
+        const options = {
             method: method,
-            body: JSON.stringify({
-                SessionId: window.cwcSessionId
-            }),
             headers: {
                 Authorization: `CWSAuth bearer=${userInstance.user.token}`,
                 'content-type': 'application/json'
             }
-        });
+        };
+
+        if (method.toLowerCase() === 'post') {
+            options.body = JSON.stringify({
+                SessionId: window.cwcSessionId
+            });
+        }
+
+        const response = await fetch(IcaUrl.url, options);
         return await response.json();
     }
 }
