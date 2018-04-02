@@ -4,14 +4,14 @@ import Helper from './helper.js';
 import IcaJson from './ica-json.js';
 import ScriptLoad from './script-load.js';
 
-window.launchHelper = function (handlers) {
+window.launchHelper = function (handlers, config) {
     const loadCitrixSDKPromise = new Promise(resolve => {
-        new ScriptLoad(`${new Manifest().manifest.staticResource}/CitrixHTML5SDK.js`, () => {
+        new ScriptLoad(`${new Manifest().manifest.staticResource || (config && config.res)}/CitrixHTML5SDK.js`, () => {
             resolve();
         }).loadScript();
     });
     
-    const getIcaJsonPromise = new IcaJson().icaAsync;
+    const getIcaJsonPromise = new IcaJson(config).icaAsync;
 
     Promise.all([loadCitrixSDKPromise, getIcaJsonPromise])
         .then(results => {
