@@ -8,7 +8,7 @@ class IcaJson {
     }
 
     async _fetchIcaJson() {
-        const method = HelperElement.method;
+        const method = HelperElement().method;
 
         const options = {
             method: method,
@@ -24,7 +24,7 @@ class IcaJson {
             });
         }
 
-        const response = await fetch(IcaUrl.url, options);
+        const response = await fetch(new IcaUrl().url, options);
         return await response.json();
     }
 }

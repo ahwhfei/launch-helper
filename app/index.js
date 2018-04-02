@@ -4,10 +4,10 @@ import IcaJson from './ica-json.js';
 import ScriptLoad from './script-load.js';
 
 window.launchHelper = function (handlers, config) {
-    HelperElement.config = config;
+    HelperElement().config = config;
 
     const loadCitrixSDKPromise = new Promise(resolve => {
-        new ScriptLoad(`${HelperElement.staticResource}/CitrixHTML5SDK.js`, () => {
+        new ScriptLoad(`${HelperElement().staticResource}/CitrixHTML5SDK.js`, () => {
             resolve();
         }).loadScript();
     });
@@ -17,7 +17,7 @@ window.launchHelper = function (handlers, config) {
     Promise.all([loadCitrixSDKPromise, getIcaJsonPromise])
         .then(results => {
             const ica = results[1];
-            HelperElement.appendIframe();
+            HelperElement().appendIframe();
         
             const helper = new Helper(ica, handlers);
             helper.createSession();

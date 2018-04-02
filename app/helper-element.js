@@ -47,4 +47,8 @@ class HelperElement {
     }
 }
 
-export default new HelperElement();
+let element = null;
+
+export default function () {
+    return element || (element = new HelperElement());   
+};
