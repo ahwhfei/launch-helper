@@ -12,8 +12,15 @@ class Helper {
         try {
             citrix.receiver.setPath(`${HelperElement().staticResource}/external/HTML5Client`);
             citrix.receiver.createSession(null, this._sessionParams, this._sessionCreated.bind(this));
-        } catch (e) {
-            console.error(e);
+            return {
+                success: true
+            };
+        } catch (err) {
+            console.error(err);
+            return {
+                success: false,
+                msg: 'create receiver session failed'   
+            };
         }
     }
 

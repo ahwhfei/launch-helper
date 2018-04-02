@@ -14,14 +14,18 @@ window.launchHelper = function (handlers, config) {
     
     const getIcaJsonPromise = new IcaJson().icaAsync;
 
-    Promise.all([loadCitrixSDKPromise, getIcaJsonPromise])
+    return Promise.all([loadCitrixSDKPromise, getIcaJsonPromise])
         .then(results => {
             const ica = results[1];
             HelperElement().appendIframe();
         
             const helper = new Helper(ica, handlers);
-            helper.createSession();
+            return helper.createSession();
         }).catch(err => {
             console.log(err);
+            return {
+                failed: true,
+                msg: 'Failed at getting Ica Json file'
+            }
         });
 };
