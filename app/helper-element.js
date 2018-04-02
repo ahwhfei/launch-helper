@@ -1,7 +1,7 @@
 class HelperElement {
-    constructor(config) {
+    constructor() {
         this._element = document.getElementsByTagName('launch-helper')[0];
-        this._config = config;
+        this._config = null;
     }
 
     get element() {
@@ -26,6 +26,10 @@ class HelperElement {
         return this._element.getAttribute('res') || (this._config && this._config.res) || window.location.origin;
     }
 
+    set config(c) {
+        this._config = c;
+    }
+
     appendIframe() {
         this._removeIframe();
         const iframe = document.createElement('iframe');
@@ -43,4 +47,4 @@ class HelperElement {
     }
 }
 
-export default HelperElement;
+export default new HelperElement();

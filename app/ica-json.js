@@ -8,7 +8,7 @@ class IcaJson {
     }
 
     async _fetchIcaJson() {
-        const method = new HelperElement().method;
+        const method = HelperElement.method;
 
         const options = {
             method: method,
