@@ -23,7 +23,7 @@ class HelperElement {
     }
 
     get staticResource() {
-        return this._element.getAttribute('res') || (this._config && this._config.res);
+        return this._element.getAttribute('res') || (this._config && this._config.res) || window.location.origin;
     }
 
     appendIframe() {
