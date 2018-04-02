@@ -1,7 +1,8 @@
 class Helper {
 
-    constructor (ica) {
+    constructor (ica, handlers) {
         this.ica = ica;
+        this.handlers = handlers;
     }
 
     createSession() {
@@ -67,28 +68,28 @@ class Helper {
             console.log('Event Received : ' + event.type);
             console.log(event.data);
         }
-        sessionObject.addListener('onConnection', connectionHandler);
+        sessionObject.addListener('onConnection', (this. handlers && this.handlers.connectionHandler) || connectionHandler);
         
         // Adding onConnectionClosed event handler
         function connectionClosedHandler(event) {
             console.log('Event Received : ' + event.type);
             console.log(event.data);
         }
-        sessionObject.addListener('onConnectionClosed', connectionClosedHandler);
+        sessionObject.addListener('onConnectionClosed', (this. handlers && this.handlers.connectionClosedHandler) || connectionClosedHandler);
     
         // Adding onError event handler
         function onErrorHandler(event) {
             console.log('Event Received : ' + event.type);
             console.log(event.data);
         }
-        sessionObject.addListener('onError', onErrorHandler);
+        sessionObject.addListener('onError', (this. handlers && this.handlers.onErrorHandler) || onErrorHandler);
     
         //Adding onURLRedirection event handler
         function onURLRedirectionHandler(event) {
             console.log('Event Received : ' + event.type);
             console.log(event.data);
         }
-        sessionObject.addListener('onURLRedirection', onURLRedirectionHandler);  
+        sessionObject.addListener('onURLRedirection', (this. handlers && this.handlers.onURLRedirectionHandler) || onURLRedirectionHandler);  
     }
 }
 

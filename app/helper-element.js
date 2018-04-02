@@ -31,8 +31,6 @@ class HelperElement {
         iframe.setAttribute('id', 'studio');
         iframe.setAttribute('width', '100%');
         iframe.setAttribute('height', '100%');
-        iframe.setAttribute('position', 'fixed');
-        iframe.setAttribute('z-index', 1001);
         this._element.appendChild(iframe);
     }
 
