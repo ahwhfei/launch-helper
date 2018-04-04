@@ -27,28 +27,44 @@ class Helper {
     get _sessionParams() {
         return {
             launchType: 'embed',
-            closeOptions: { showDisconnectAlert: false },
-            // TBD : set preferredLang based on the admin's language selection in CC, which is available in a cookie
-            //preferredLang: { },
             container: {
-                type: 'iframe',
-                id: 'studio'
+                id: 'studio',
+                type: 'iframe'
             },
+            bounds: {
+                'autoresize': false
+            },
+            closeOptions: {
+                type: 'close',
+                showDisconnectAlert: false // false won't prompt when the session is about to disconnect due to the actions like close/reload of the tab.
+            },
+            // preferredLang: this._translateService.currentLang,
             preferences: {
                 ui: {
                     toolbar: {
-                        fileTransfer: false,
-                        about: false,
-                        lock: false,
-                        disconnect: false,
-                        logoff: true,
-                        fullscreen: false,
-                        multitouch: false,
-                        switchApp: false,
-                        preferences: false
+                        menubar: true, // false - hides the toolbar
+                        clipboard: true, // false - hides the clipboard button from toolbar
+                        fileTransfer: true, // false - hides the file upload and download buttons from toolbar
+                        about: true, // false - hides the about button from toolbar
+                        lock: false, // false - hides the ctrl+alt+del button from toolbar
+                        disconnect: false, // false - hides the disconnect button from toolbar
+                        logoff: true, // false - hides the logoff button from toolbar
+                        fullscreen: false, // false - hides the fullscreen button from toolbar
+                        keyboard: true, // false - hides the keyboard button from toolbar, this button appears only in touch devices
+                        multitouch: true, // false - hides the multitouch button from toolbar, this button appears only in touch devices
+                        switchApp: false, // false - hides the switchApp button from toolbar, this button appears only for apps session
+                        preferences: true, // false - hides the preferences button from toolbar
+                        gestureGuide: true // false - hides the gestureGuide button from toolbar, this button appears only in touch devices
+                    },
+                    hide: {
+                        urlredirection: true, // true - hides the urlredirection dialog shown by HTML5 Engine
+                        error: false, // true - hides the error dialog shown by HTML5 Engine
+                        ftu: true // true - hides the FTU(first time user dialog) shown by HTML5 Engine
                     },
                     appSwitcher: {
-                        showTaskbar: false
+                        showTaskbar: false, // false - disables the desktop appSwitcher/taskbar seen at the bottom
+                        autoHide: false, // true - selects the Auto Hide checkbox present in the context menu of desktop appSwitcher/taskbar at the bottom
+                        showIconsOnly: false // true - selects the Show Icons only checkbox present in the context menu of desktop appSwitcher/taskbar at the bottom
                     }
                 }
             }
@@ -74,31 +90,63 @@ class Helper {
         //Handle session interactions like events, start, disconnect here.              
         // Adding onConnection event handler
         function connectionHandler(event) {
-            console.log('Event Received : ' + event.type);
-            console.log(event.data);
+            if (this.handlers 
+                && this.handlers.connectionHandler
+                && typeof this.handlers.connectionHandler === 'function') {
+                    this.handlers.connectionHandler(event);
+            } else {
+                console.log('Event Received : ' + event.type);
+                console.log(event.data);
+            }
+
+            switch (event.data.state) {
+                case 'sessionReady':
+                    sessionObject.changeResolution({ 'autoresize': true });
+                    break;
+                default:
+                    break;
+            }
         }
-        sessionObject.addListener('onConnection', (this. handlers && this.handlers.connectionHandler) || connectionHandler);
+        sessionObject.addListener('onConnection', connectionHandler);
         
         // Adding onConnectionClosed event handler
         function connectionClosedHandler(event) {
-            console.log('Event Received : ' + event.type);
-            console.log(event.data);
+            if (this.handlers 
+                && this.handlers.connectionClosedHandler
+                && typeof this.handlers.connectionClosedHandler === 'function') {
+                    this.handlers.connectionClosedHandler(event);
+            } else {
+                console.log('Event Received : ' + event.type);
+                console.log(event.data);
+            }
         }
-        sessionObject.addListener('onConnectionClosed', (this. handlers && this.handlers.connectionClosedHandler) || connectionClosedHandler);
+        sessionObject.addListener('onConnectionClosed', connectionClosedHandler);
     
         // Adding onError event handler
         function onErrorHandler(event) {
-            console.log('Event Received : ' + event.type);
-            console.log(event.data);
+            if (this.handlers 
+                && this.handlers.onErrorHandler
+                && typeof this.handlers.onErrorHandler === 'function') {
+                    this.handlers.onErrorHandler(event);
+            } else {
+                console.log('Event Received : ' + event.type);
+                console.log(event.data);
+            }
         }
-        sessionObject.addListener('onError', (this. handlers && this.handlers.onErrorHandler) || onErrorHandler);
+        sessionObject.addListener('onError', onErrorHandler);
     
         //Adding onURLRedirection event handler
         function onURLRedirectionHandler(event) {
-            console.log('Event Received : ' + event.type);
-            console.log(event.data);
+            if (this.handlers 
+                && this.handlers.onURLRedirectionHandler
+                && typeof this.handlers.onURLRedirectionHandler === 'function') {
+                    this.handlers.onURLRedirectionHandler(event);
+            } else {
+                console.log('Event Received : ' + event.type);
+                console.log(event.data);
+            }
         }
-        sessionObject.addListener('onURLRedirection', (this. handlers && this.handlers.onURLRedirectionHandler) || onURLRedirectionHandler);  
+        sessionObject.addListener('onURLRedirection', onURLRedirectionHandler);  
     }
 }
 

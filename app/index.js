@@ -20,7 +20,9 @@ window.launchHelper = function (handlers, config) {
             HelperElement().appendIframe();
         
             const helper = new Helper(ica, handlers);
-            return helper.createSession();
+            const status = helper.createSession();
+            status.studioUILocale = ica.StudioUILocale;
+            return status;
         }).catch(err => {
             console.log(err);
             return {
