@@ -32,7 +32,9 @@ class Helper {
                 type: 'iframe'
             },
             bounds: {
-                'autoresize': false
+                autoresize: false,
+                width: '100%',
+                height: '100%'
             },
             closeOptions: {
                 type: 'close',
