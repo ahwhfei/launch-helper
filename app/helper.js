@@ -109,7 +109,7 @@ class Helper {
                     break;
             }
         }
-        sessionObject.addListener('onConnection', connectionHandler);
+        sessionObject.addListener('onConnection', connectionHandler.bind(this));
         
         // Adding onConnectionClosed event handler
         function connectionClosedHandler(event) {
@@ -122,7 +122,7 @@ class Helper {
                 console.log(event.data);
             }
         }
-        sessionObject.addListener('onConnectionClosed', connectionClosedHandler);
+        sessionObject.addListener('onConnectionClosed', connectionClosedHandler.bind(this));
     
         // Adding onError event handler
         function onErrorHandler(event) {
@@ -135,7 +135,7 @@ class Helper {
                 console.log(event.data);
             }
         }
-        sessionObject.addListener('onError', onErrorHandler);
+        sessionObject.addListener('onError', onErrorHandler.bind(this));
     
         //Adding onURLRedirection event handler
         function onURLRedirectionHandler(event) {
@@ -148,7 +148,7 @@ class Helper {
                 console.log(event.data);
             }
         }
-        sessionObject.addListener('onURLRedirection', onURLRedirectionHandler);  
+        sessionObject.addListener('onURLRedirection', onURLRedirectionHandler.bind(this));  
     }
 }
 
