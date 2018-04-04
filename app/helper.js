@@ -33,8 +33,8 @@ class Helper {
             },
             bounds: {
                 autoresize: false,
-                width: '100%',
-                height: '100%'
+                width: HelperElement().clientWidth,
+                height: HelperElement().clientHeight
             },
             closeOptions: {
                 type: 'close',
