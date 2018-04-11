@@ -3,7 +3,7 @@ import Helper from './helper.js';
 import IcaJson from './ica-json.js';
 import ScriptLoad from './script-load.js';
 
-window.launchHelper = function (handlers, config) {
+function launchHelper (handlers, config) {
     HelperElement().config = config;
 
     const loadCitrixSDKPromise = new Promise(resolve => {
@@ -21,7 +21,7 @@ window.launchHelper = function (handlers, config) {
         
             const helper = new Helper(ica, handlers);
             const status = helper.createSession();
-            status.studioUILocale = ica.StudioUILocale;
+            status.ica = ica;
             return status;
         }).catch(err => {
             console.log(err);
@@ -31,3 +31,13 @@ window.launchHelper = function (handlers, config) {
             }
         });
 };
+
+function getIca(config) {
+    HelperElement().config = config;
+    return new IcaJson().icaAsync;
+}
+
+export default {
+    launchHelper: launchHelper,
+    getIca: getIca
+}
