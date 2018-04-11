@@ -36,3 +36,8 @@ export function getIca(config) {
     HelperElement().config = config;
     return new IcaJson().icaAsync;
 }
+
+export {
+    launchHelper,
+    getIca
+}
