@@ -3,7 +3,7 @@ import Helper from './helper.js';
 import IcaJson from './ica-json.js';
 import ScriptLoad from './script-load.js';
 
-function launchHelper (handlers, config) {
+export function launchHelper (handlers, config) {
     HelperElement().config = config;
 
     const loadCitrixSDKPromise = new Promise(resolve => {
@@ -32,12 +32,7 @@ function launchHelper (handlers, config) {
         });
 };
 
-function getIca(config) {
+export function getIca(config) {
     HelperElement().config = config;
     return new IcaJson().icaAsync;
-}
-
-export default {
-    launchHelper: launchHelper,
-    getIca: getIca
 }
