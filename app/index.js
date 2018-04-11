@@ -37,7 +37,6 @@ function getIca(config) {
     return new IcaJson().icaAsync;
 }
 
-
 (function(root, factory) {
     if (typeof define === 'function' && typeof define.amd === 'object') {
         define([], factory);
