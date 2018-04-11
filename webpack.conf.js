@@ -26,7 +26,7 @@ module.exports = {
         }
         ]),
         new CompressionPlugin({
-            exclude: /^index.html$/,
+            exclude: /^launch-helper.min.js$/,
             asset: '[path][query]',
             minRatio: 5,
             compressionOptions: {
