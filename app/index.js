@@ -37,7 +37,16 @@ function getIca(config) {
     return new IcaJson().icaAsync;
 }
 
-export {
-    launchHelper,
-    getIca
-}
+
+(function(root, factory) {
+    if (typeof define === 'function' && typeof define.amd === 'object') {
+        define([], factory);
+    } else {
+        root['launch-helper'] = factory();
+    }
+})(this, function() {
+    return {
+        launchHelper: launchHelper,
+        getIca, getIca
+    };
+});
