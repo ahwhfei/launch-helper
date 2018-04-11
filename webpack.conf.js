@@ -1,6 +1,5 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     devServer: {
@@ -24,14 +23,6 @@ module.exports = {
             from: 'external',
             to: 'external'
         }
-        ]),
-        new CompressionPlugin({
-            exclude: /^launch-helper.min.js$/,
-            asset: '[path][query]',
-            minRatio: 5,
-            compressionOptions: {
-                level: 9
-            }
-        })
+        ])
     ]
 };
