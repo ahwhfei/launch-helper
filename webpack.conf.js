@@ -1,6 +1,6 @@
 const path = require('path');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     devServer: {
@@ -18,20 +18,20 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     plugins: [
-        // new UglifyJSPlugin(),
         new CopyWebpackPlugin([{
-                from: 'HDXEngine.html',
-                to: 'HDXEngine.html'
-            }, {
-                from: 'HDXLauncher.js',
-                to: 'HDXLauncher.js'
-            }, {
-                from: 'CitrixHTML5SDK.js',
-                to: 'CitrixHTML5SDK.js'
-            }, {
-                from: 'external',
-                to: 'external'
+            from: 'receiver',
+        }, {
+            from: 'external',
+            to: 'external'
+        }
+        ]),
+        new CompressionPlugin({
+            exclude: /^index.html$/,
+            asset: '[path][query]',
+            minRatio: 5,
+            compressionOptions: {
+                level: 9
             }
-        ])
+        })
     ]
 };
